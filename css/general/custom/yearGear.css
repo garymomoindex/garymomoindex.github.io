@@ -1,0 +1,35 @@
+#yearGear {
+	position: absolute;
+	left: 75%;
+	bottom: 0px;
+	width: 100%;
+}
+#yearGear img {
+	width: 40%;
+	height: 40%;
+}
+
+.showYear {
+	position: absolute;
+}
+#nextYear {
+	left: -2%;
+	top: 24%;
+	width: 15%;
+	font-size: 3rem;
+	font-family: "Wendy One", cursive;
+}
+#activeYear {
+	left: -16%;
+	top: 38%;
+	width: 15%;
+	font-size: 6rem;
+	font-family: "Wendy One", cursive;
+}
+#pastYear {
+	left: -7%;
+	top: 65%;
+	width: 15%;
+	font-size: 3rem;
+	font-family: "Wendy One", cursive;
+}

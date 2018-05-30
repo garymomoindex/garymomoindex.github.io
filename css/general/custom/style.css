@@ -1,0 +1,18 @@
+.fullContain {
+	min-height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.mainContain {
+	height: 900px;
+}
+
+#indexBK {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+}
