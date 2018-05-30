@@ -4,7 +4,12 @@ $(document).ready(function() {
 	var range = year - 2008;
 
 	$.each(showYear, function(key, value) {
-		$(this).text(year + 1 - key);
+		var insertTxt = year + 1 - key;
+		if ((insertTxt > year) || (insertTxt < 2008)) {
+			$(this).html(insertTxt);
+		} else {
+			$(this).html("<a href='https://garymomo" + insertTxt + ".github.io'>" + insertTxt + "</a>");
+		}
 	});
 
 	var rotationSnap = 45;
@@ -20,7 +25,12 @@ $(document).ready(function() {
 			var result = Math.round(this.rotation / rotationSnap);
 
 			$.each(showYear, function(key, value) {
-				$(this).text(year + 1 - key - result);
+				var insertTxt = year + 1 - key - result;
+				if ((insertTxt > year) || (insertTxt < 2008)) {
+					$(this).html(insertTxt);
+				} else {
+					$(this).html("<a href='https://garymomo" + insertTxt + ".github.io'>" + insertTxt + "</a>");
+				}
 			});
 
 			return result * rotationSnap;
