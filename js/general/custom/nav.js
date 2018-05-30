@@ -13,7 +13,7 @@ document.writeln("			<ul class='nav navbar-nav'>");
 document.writeln("			<li id='yearList' class='dropdown'>");
 document.writeln("				<a class='dropdown-toggle' data-toggle='dropdown'>穿越 -時-<span class='caret'></span></a>");
 document.writeln("				<ul class='dropdown-menu' id='momoNavTime'>");
-document.writeln("					<li><a>2018 -守護四葉-</a></li>");
+document.writeln("					<li><a href='https://garymomo2018.github.io'>2018 -守護四葉-</a></li>");
 document.writeln("				</ul>");
 document.writeln("			</li>");
 
