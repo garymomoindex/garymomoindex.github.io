@@ -15,11 +15,15 @@
 
 		if (width != ori_width) {
 			if (width > 767) {
-				$(".navbar").css("display", "none");
+				$("#yearList").css("display", "none");
+				$(".container-fluid").css("padding-right", "0px");
+				$(".container-fluid").css("padding-left", "0px");
 				$("#yearGear").css("display", "");
 				$(".left-video").css("width", "55%");
 			} else {
-				$(".navbar").css("display", "");
+				$("#yearList").css("display", "");
+				$(".container-fluid").css("padding-right", "15px");
+				$(".container-fluid").css("padding-left", "15px");
 				$("#yearGear").css("display", "none");
 				$(".left-video").css("width", "100%");
 			}

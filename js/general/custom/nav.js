@@ -1,8 +1,7 @@
 ﻿document.writeln("<nav class='navbar navbar-default'>");
 document.writeln("	<div class='container-fluid'>");
 document.writeln("		<div class='navbar-header'>");
-document
-		.writeln("			<button type='button' class='navbar-toggle' id='navbar-toggle-custom' data-toggle='collapse' data-target='#momoNavbar'>");
+document.writeln("			<button type='button' class='navbar-toggle' id='navbar-toggle-custom' data-toggle='collapse' data-target='#momoNavbar'>");
 document.writeln("				<span class='icon-bar'></span>");
 document.writeln("				<span class='icon-bar'></span>");
 document.writeln("				<span class='icon-bar'></span>");
@@ -11,9 +10,8 @@ document.writeln("		</div>");
 document.writeln("		<div class='collapse navbar-collapse' id='momoNavbar'>");
 document.writeln("			<ul class='nav navbar-nav'>");
 
-document.writeln("			<li class='dropdown'>");
-document
-		.writeln("				<a class='dropdown-toggle' data-toggle='dropdown'>穿越 -時-<span class='caret'></span></a>");
+document.writeln("			<li id='yearList' class='dropdown'>");
+document.writeln("				<a class='dropdown-toggle' data-toggle='dropdown'>穿越 -時-<span class='caret'></span></a>");
 document.writeln("				<ul class='dropdown-menu' id='momoNavTime'>");
 document.writeln("					<li><a>2018 -守護四葉-</a></li>");
 document.writeln("				</ul>");
