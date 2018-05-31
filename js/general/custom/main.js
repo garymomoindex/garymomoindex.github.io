@@ -13,7 +13,7 @@
 
 	function resize() {
 		width = window.innerWidth;
-		height = window.innerHeight;
+		height = $(document).innerHeight;
 		$(".mainContain").css("height", height);
 
 		if (width != ori_width) {
