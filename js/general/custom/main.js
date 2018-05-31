@@ -3,6 +3,7 @@
 	var ori_width = "0";
 	var videoWidth = null;
 	var value = 0;
+	var offset = 10;
 	var indexVideoToggle = false;
 	var indexVideoTL = null;
 	var indexVideoTL2 = null;
@@ -27,11 +28,11 @@
 				$(".container-fluid").css("padding-right", "15px");
 				$(".container-fluid").css("padding-left", "15px");
 				$("#yearGear").css("display", "none");
-				$(".left-video").css("width", "100%");
+				$(".left-video").css("width", "90%");
 			}
 
 			videoWidth = $(".left-video").css("width");
-			value = parseInt(videoWidth.substring(0, videoWidth.indexOf("px")));
+			value = parseInt(videoWidth.substring(0, videoWidth.indexOf("px"))) - offset;
 
 			if (indexVideoToggle) {
 				$(".left-video").css("left", value * (-1));
@@ -42,21 +43,21 @@
 
 	$(".left-video figure").on("click", function() {
 		if (indexVideoToggle) {
+			indexVideoToggle = false;
 			indexVideoTL = new TimelineMax();
 
-			indexVideoTL.to($(".left-video"), 2, {
+			indexVideoTL.to($(".left-video"), 0.5, {
 				left : 0,
 				ease : Back.easeOut
 			});
-			indexVideoToggle = false;
 		} else {
+			indexVideoToggle = true;
 			indexVideoTL2 = new TimelineMax();
 
-			indexVideoTL2.to($(".left-video"), 3, {
+			indexVideoTL2.to($(".left-video"), 0.5, {
 				left : value * (-1),
 				ease : Bounce.easeOut
 			});
-			indexVideoToggle = true;
 		}
 	});
 });
