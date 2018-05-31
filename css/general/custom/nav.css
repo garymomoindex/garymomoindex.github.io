@@ -14,6 +14,10 @@
 	background-image: none;
 }
 
+.navbar-nav {
+	margin-left: 3%;
+}
+
 #momoNavbar, #momoNavbar ul {
 	border-top: 0px;
 	background-color: #888888;

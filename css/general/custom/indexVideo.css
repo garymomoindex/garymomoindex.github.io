@@ -1,7 +1,7 @@
 .left-video {
-	position: absolute;
+	position: fixed;
 	width: 55%;
-	bottom: 10%;
+	bottom: 12%;
 	left: 0px;
 	z-index: 5;
 	border: 10px solid #000000;

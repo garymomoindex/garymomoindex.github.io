@@ -8,10 +8,6 @@ body {
 	overflow: hidden;
 }
 
-.mainContain {
-	height: 900px;
-}
-
 #indexBK {
 	position: fixed;
 	top: 0px;
