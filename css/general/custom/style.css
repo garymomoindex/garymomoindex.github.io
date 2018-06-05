@@ -8,6 +8,39 @@ body {
 	overflow: hidden;
 }
 
+#doorL {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 20;
+	height: 100%;
+	width: 50%;
+}
+#doorR {
+	position: fixed;
+	top: 0px;
+	left: 50%;
+	z-index: 20;
+	height: 100%;
+	width: 50%;
+}
+.doorLock {
+	position: fixed;
+	top: 25%;
+	left: 25%;
+	z-index: 21;
+	height: 50%;
+	width: 50%;
+}
+#lock6 {
+	position: fixed;
+	top: 18.6%;
+	left: 18.6%;
+	z-index: 21;
+	height: 62.8%;
+	width: 62.8%;
+}
+
 #indexBK {
 	position: fixed;
 	top: 0px;

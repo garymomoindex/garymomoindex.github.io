@@ -1,12 +1,7 @@
 #yearGear {
 	position: absolute;
-	left: 75%;
 	bottom: 0px;
 	width: 100%;
-}
-#yearGear img {
-	width: 40%;
-	height: 40%;
 }
 
 .showYear {
@@ -27,9 +22,50 @@
 	font-family: "Wendy One", cursive;
 }
 #pastYear {
-	left: -7%;
-	top: 65%;
 	width: 15%;
 	font-size: 3rem;
 	font-family: "Wendy One", cursive;
+}
+
+@media (min-width: 1001px) {
+	#yearGear {
+		left: 75%;
+	}
+	#yearGear img {
+		width: 30%;
+		height: 30%;
+	}
+	#nextYear {
+		left: -4%;
+		top: 24%;
+	}
+	#activeYear {
+		left: -14%;
+		top: 38%;
+	}
+	#pastYear {
+		left: -7%;
+		top: 65%;
+	}
+}
+@media (max-width: 1000px) {
+	#yearGear {
+		left: 80%;
+	}
+	#yearGear img {
+		width: 25%;
+		height: 25%;
+	}
+	#nextYear {
+		left: -5%;
+		top: 16%;
+	}
+	#activeYear {
+		left: -18%;
+		top: 28%;
+	}
+	#pastYear {
+		left: -12%;
+		top: 57%;
+	}
 }
