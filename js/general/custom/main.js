@@ -4,6 +4,7 @@
 	var videoWidth = null;
 	var value = 0;
 	var offset = 10;
+	var indexDoorOpen = false;
 	var indexVideoToggle = false;
 	var videoGearTL = null;
 	var indexVideoTL = null;
@@ -51,48 +52,51 @@
 	}
 
 	$("#lock1").on("click", function() {
-		var doorTL = new TimelineMax();
-		
-		doorTL.to($("#lock1"), 0, {
-			alpha : 0
-		})
-		.to($("#lock2"), 0, {
-			alpha : 1
-		})
-		.to($("#lock2"), 0, {
-			alpha : 0
-		}, "+=1.5")
-		.to($("#lock3"), 0, {
-			alpha : 1
-		})
-		.to($("#lock3"), 0, {
-			alpha : 0
-		}, "+=1.5")
-		.to($("#lock4"), 0, {
-			alpha : 1
-		})
-		.to($("#lock4"), 0, {
-			alpha : 0
-		}, "+=1.5")
-		.to($("#lock5"), 0, {
-			alpha : 1
-		})
-		.to($("#lock5"), 0, {
-			alpha : 0
-		}, "+=1.5")
-		.to($("#lock6"), 0, {
-			alpha : 1
-		})
-		.to($(".shiftLeft"), 3, {
-			left : width * (-200),
-			alpha : 0,
-			ease : Circ.easeIn
-		})
-		.to($(".shiftRight"), 3, {
-			left : width * (200),
-			alpha : 0,
-			ease : Circ.easeIn
-		}, "-=3");
+		if (!indexDoorOpen) {
+			indexDoorOpen = true;
+			var doorTL = new TimelineMax();
+
+			doorTL.to($("#lock1"), 0, {
+				alpha : 0
+			})
+			.to($("#lock2"), 0, {
+				alpha : 1
+			})
+			.to($("#lock2"), 0, {
+				alpha : 0
+			}, "+=1.5")
+			.to($("#lock3"), 0, {
+				alpha : 1
+			})
+			.to($("#lock3"), 0, {
+				alpha : 0
+			}, "+=1.5")
+			.to($("#lock4"), 0, {
+				alpha : 1
+			})
+			.to($("#lock4"), 0, {
+				alpha : 0
+			}, "+=1.5")
+			.to($("#lock5"), 0, {
+				alpha : 1
+			})
+			.to($("#lock5"), 0, {
+				alpha : 0
+			}, "+=1.5")
+			.to($("#lock6"), 0, {
+				alpha : 1
+			})
+			.to($(".shiftLeft"), 3, {
+				left : width * (-200),
+				alpha : 0,
+				ease : Circ.easeIn
+			}, "+=1.5")
+			.to($(".shiftRight"), 3, {
+				left : width * (200),
+				alpha : 0,
+				ease : Circ.easeIn
+			}, "-=3");
+		}
 	});
 
 	$(".left-video figure").on("click", function() {

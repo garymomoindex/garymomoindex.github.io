@@ -32,6 +32,9 @@ body {
 	height: 50%;
 	width: 50%;
 }
+#lock1 {
+	cursor: pointer;
+}
 #lock6 {
 	position: fixed;
 	top: 18.6%;
