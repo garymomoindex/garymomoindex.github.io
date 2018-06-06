@@ -8,6 +8,10 @@ body {
 	overflow: hidden;
 }
 
+#indexOpen1 {
+	background-color: #000000;
+}
+
 #doorL {
 	position: fixed;
 	top: 0px;
