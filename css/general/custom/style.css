@@ -27,21 +27,283 @@ body {
 .doorLock {
 	position: fixed;
 	top: 25%;
-	left: 25%;
+	left: 50%;
 	z-index: 21;
-	height: 50%;
+	margin-left: -25%;
 	width: 50%;
+	height: 50%;
 }
 #lock1 {
 	cursor: pointer;
 }
 #lock6 {
 	position: fixed;
-	top: 18.6%;
-	left: 18.6%;
+	top: 18.59%;
+	left: 50%;
 	z-index: 21;
-	height: 62.8%;
-	width: 62.8%;
+	margin-left: -31.41%;
+	height: 62.82%;
+	width: 62.82%;
+}
+
+#gearG1 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	height: 60%;
+	width: 60%;
+}
+#gearG2 {
+	position: fixed;
+	top: 45%;
+	left: 45%;
+	z-index: 10;
+	height: 60%;
+	width: 60%;
+}
+#gearU1 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	min-width: 30%;
+	max-width: 30%;
+	height: auto;
+}
+#gearU2 {
+	position: fixed;
+	top: 5%;
+	left: 55%;
+	z-index: 10;
+	min-width: 30%;
+	max-width: 30%;
+	height: auto;
+}
+#gearU3 {
+	position: fixed;
+	top: 10%;
+	left: 40%;
+	z-index: 10;
+	min-width: 30%;
+	max-width: 30%;
+	height: auto;
+}
+#gearU4 {
+	position: fixed;
+	top: 12%;
+	left: 80%;
+	z-index: 10;
+	min-width: 25%;
+	max-width: 25%;
+	height: auto;
+}
+#gearU5 {
+	position: fixed;
+	top: -2%;
+	left: -2%;
+	z-index: 10;
+	min-width: 25%;
+	max-width: 25%;
+	height: auto;
+}
+#gearU6 {
+	position: fixed;
+	top: -2%;
+	left: 70%;
+	z-index: 10;
+	min-width: 25%;
+	max-width: 25%;
+	height: auto;
+}
+#gearU7 {
+	position: fixed;
+	top: 2%;
+	left: 32%;
+	z-index: 10;
+	min-width: 20%;
+	max-width: 20%;
+	height: auto;
+}
+#gearU8 {
+	position: fixed;
+	top: 20%;
+	left: -8%;
+	z-index: 10;
+	min-width: 20%;
+	max-width: 20%;
+	height: auto;
+}
+#gearU9 {
+	position: fixed;
+	top: 2%;
+	left: 90%;
+	z-index: 10;
+	min-width: 20%;
+	max-width: 20%;
+	height: auto;
+}
+#gearU10 {
+	position: fixed;
+	top: 18%;
+	left: 68%;
+	z-index: 10;
+	min-width: 20%;
+	max-width: 20%;
+	height: auto;
+}
+#gearU11 {
+	position: fixed;
+	top: -2%;
+	left: 20%;
+	z-index: 10;
+	min-width: 20%;
+	max-width: 20%;
+	height: auto;
+}
+#gearU12 {
+	position: fixed;
+	top: -2%;
+	left: 60%;
+	z-index: 10;
+	min-width: 20%;
+	max-width: 20%;
+	height: auto;
+}
+#gearU13 {
+	position: fixed;
+	top: 26%;
+	left: 90%;
+	z-index: 10;
+	min-width: 20%;
+	max-width: 20%;
+	height: auto;
+}
+#gearU14 {
+	position: fixed;
+	top: -4%;
+	left: 45%;
+	z-index: 10;
+	min-width: 25%;
+	max-width: 25%;
+	height: auto;
+}
+#gearD1 {
+	position: fixed;
+	top: 82%;
+	left: 45%;
+	z-index: 10;
+	min-width: 30%;
+	max-width: 30%;
+	height: auto;
+}
+#gearD2 {
+	position: fixed;
+	top: 80%;
+	left: 5%;
+	z-index: 10;
+	min-width: 30%;
+	max-width: 30%;
+	height: auto;
+}
+#gearD3 {
+	position: fixed;
+	top: 70%;
+	left: -2%;
+	z-index: 10;
+	min-width: 25%;
+	max-width: 25%;
+	height: auto;
+}
+#gearD4 {
+	position: fixed;
+	top: 45%;
+	left: 88%;
+	z-index: 10;
+	min-width: 25%;
+	max-width: 25%;
+	height: auto;
+}
+#gearD5 {
+	position: fixed;
+	top: 66%;
+	left: 24%;
+	z-index: 10;
+	min-width: 25%;
+	max-width: 25%;
+	height: auto;
+}
+#gearD6 {
+	position: fixed;
+	top: 58%;
+	left: 55%;
+	z-index: 10;
+	min-width: 25%;
+	max-width: 25%;
+	height: auto;
+}
+#gearD7 {
+	position: fixed;
+	top: 84%;
+	left: 28%;
+	z-index: 10;
+	min-width: 20%;
+	max-width: 20%;
+	height: auto;
+}
+#gearD8 {
+	position: fixed;
+	top: 64%;
+	left: 47%;
+	z-index: 10;
+	min-width: 20%;
+	max-width: 20%;
+	height: auto;
+}
+#gearD9 {
+	position: fixed;
+	top: 64%;
+	left: 37%;
+	z-index: 10;
+	min-width: 20%;
+	max-width: 20%;
+	height: auto;
+}
+#gearD10 {
+	position: fixed;
+	top: 59%;
+	left: -4%;
+	z-index: 10;
+	min-width: 20%;
+	max-width: 20%;
+	height: auto;
+}
+#gearD11 {
+	position: fixed;
+	top: 59%;
+	left: 14%;
+	z-index: 10;
+	min-width: 20%;
+	max-width: 20%;
+	height: auto;
+}
+#gearD12 {
+	position: fixed;
+	top: 50%;
+	left: 34%;
+	z-index: 10;
+	min-width: 20%;
+	max-width: 20%;
+	height: auto;
+}
+#gearD13 {
+	position: fixed;
+	top: 40%;
+	left: 64%;
+	z-index: 10;
+	min-width: 20%;
+	max-width: 20%;
+	height: auto;
 }
 
 #indexBK {

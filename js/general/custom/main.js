@@ -1,11 +1,13 @@
 ﻿$(document).ready(function() {
 	var width = window.innerWidth;
 	var ori_width = "0";
+	var setheight = "0";
 	var videoWidth = null;
 	var value = 0;
 	var offset = 10;
 	var indexDoorOpen = false;
 	var indexVideoToggle = false;
+	var gearTL = null;
 	var videoGearTL = null;
 	var indexVideoTL = null;
 	var indexVideoTL2 = null;
@@ -22,7 +24,7 @@
 
 		$(".mainContain").css("height","auto");
 		if($(window).height() > $(".mainContain").css("height").substring(0, $(".mainContain").css("height").indexOf("px"))) {
-			var setheight = $(window).height();
+			setheight = $(window).height();
 			$(".mainContain").css("height", setheight);
 		}
 
@@ -54,7 +56,36 @@
 	$("#lock1").on("click", function() {
 		if (!indexDoorOpen) {
 			indexDoorOpen = true;
-			var doorTL = new TimelineMax();
+			var doorTL = new TimelineMax({onComplete : nextStep});
+			gearTL = new TimelineMax({paused : true});
+
+			var t1 = new TweenMax.to($("#gearG1"), 5, {top : -200, alpha : 0});
+			var t2 = new TweenMax.to($("#gearG2"), 5, {top : setheight * (2), alpha : 0});
+
+			gearTL.insert(t1,0).insert(t2,0)
+			.to($(".indexOpen2"), 0, {
+				zIndex : -5
+			}, "-=0.1");
+
+			$.each($(".shiftUp"), function(key, value) {
+				var time = 0;
+				var count = 0;
+
+				time = Math.floor(Math.random() * 6) + 2;
+				count = Math.floor(Math.random() * 3) + 1;
+				var tu = new TweenMax.to($(this), time, {top : -200, alpha : 0, rotation:(360*count)});
+				gearTL.insert(tu,0);
+			});
+			
+			$.each($(".shiftDown"), function(key, value) {
+				var time = 0;
+				var count = 0;
+
+				time = Math.floor(Math.random() * 6) + 2;
+				count = Math.floor(Math.random() * 3) + 1;
+				var td = new TweenMax.to($(this), time, {top : setheight * (2), alpha : 0, rotation:(360*count)});
+				gearTL.insert(td,0);
+			});
 
 			doorTL.to($("#lock1"), 0, {
 				alpha : 0
@@ -86,18 +117,25 @@
 			.to($("#lock6"), 0, {
 				alpha : 1
 			})
-			.to($(".shiftLeft"), 3, {
+			.to($(".shiftLeft"), 2.5, {
 				left : width * (-200),
 				alpha : 0,
 				ease : Circ.easeIn
 			}, "+=1.5")
-			.to($(".shiftRight"), 3, {
+			.to($(".shiftRight"), 2.5, {
 				left : width * (200),
 				alpha : 0,
 				ease : Circ.easeIn
-			}, "-=3");
+			}, "-=2.5")
+			.to($(".indexOpen1"), 0, {
+				zIndex : -5
+			}, "-=0.1");
 		}
 	});
+
+	function nextStep() {
+		gearTL.play();
+	}
 
 	$(".left-video figure").on("click", function() {
 		if (indexVideoToggle) {
