@@ -12,7 +12,7 @@
 	var indexVideoTL = null;
 	var indexVideoTL2 = null;
 
-	TweenMax.set(["#lock2", "#lock3", "#lock4", "#lock5", "#lock6"], {
+	TweenMax.set(["#lock2", "#lock3", "#lock4", "#lock5", "#lock6", "#smoke"], {
 		alpha : 0
 	});
 
@@ -117,11 +117,20 @@
 			.to($("#lock6"), 0, {
 				alpha : 1
 			})
+			.to($("#smoke"), 1.5, {
+				alpha : 0.8,
+				ease : Circ.easeOut
+			})	
+			.to($("#smoke"), 1.5, {
+				top : (setheight/2),
+				alpha : 0,
+				ease : Circ.easeOut
+			}, "-=0.1")
 			.to($(".shiftLeft"), 2.5, {
 				left : width * (-200),
 				alpha : 0,
 				ease : Circ.easeIn
-			}, "+=1.5")
+			}, "-=1.5")
 			.to($(".shiftRight"), 2.5, {
 				left : width * (200),
 				alpha : 0,

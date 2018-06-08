@@ -49,6 +49,15 @@ body {
 	height: 62.82%;
 	width: 62.82%;
 }
+#smoke {
+	position: fixed;
+	top: 5%;
+	left: 50%;
+	z-index: 21;
+	margin-left: -45%;
+	width: 90%;
+	height: 90%;
+}
 
 #gearG1 {
 	position: fixed;
