@@ -117,20 +117,21 @@
 			.to($("#lock6"), 0, {
 				alpha : 1
 			})
-			.to($("#smoke"), 1.5, {
+			.to($("#smoke"), 0.7, {
+				top : (setheight/3),
 				alpha : 0.8,
-				ease : Circ.easeOut
-			})	
-			.to($("#smoke"), 1.5, {
-				top : (setheight/2),
+				scale : 1.5
+			})
+			.to($("#smoke"), 0.7, {
+				top : (setheight*2/3),
 				alpha : 0,
-				ease : Circ.easeOut
-			}, "-=0.1")
+				scale : 2
+			})
 			.to($(".shiftLeft"), 2.5, {
 				left : width * (-200),
 				alpha : 0,
 				ease : Circ.easeIn
-			}, "-=1.5")
+			}, "-=0.7")
 			.to($(".shiftRight"), 2.5, {
 				left : width * (200),
 				alpha : 0,
