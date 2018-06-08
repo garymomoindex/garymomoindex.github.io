@@ -14,6 +14,8 @@ document.writeln("				<li id='yearList' class='dropdown'>");
 document.writeln("					<a class='dropdown-toggle' data-toggle='dropdown'>穿越 -時-<span class='caret'></span></a>");
 document.writeln("					<ul class='dropdown-menu' id='momoNavTime'>");
 document.writeln("						<li><a href='https://garymomo2018.github.io'>2018 -守護四葉-</a></li>");
+document.writeln("						<li><a href='https://garymomo2017.github.io'>2017 -綠意青春-</a></li>");
+document.writeln("						<li><a href='https://garymomo2016.github.io/redirection'>2016 -自由獨行-</a></li>");
 document.writeln("					</ul>");
 document.writeln("				</li>");
 

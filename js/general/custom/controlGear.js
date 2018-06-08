@@ -8,7 +8,11 @@ $(document).ready(function() {
 		if ((insertTxt > year) || (insertTxt < 2008)) {
 			$(this).html(insertTxt);
 		} else {
-			$(this).html("<a href='https://garymomo" + insertTxt + ".github.io'>" + insertTxt + "</a>");
+			if (insertTxt == "2016") {
+				$(this).html("<a href='https://garymomo" + insertTxt + ".github.io/redirection'>" + insertTxt + "</a>");
+			} else {
+				$(this).html("<a href='https://garymomo" + insertTxt + ".github.io'>" + insertTxt + "</a>");
+			}
 		}
 	});
 
@@ -29,7 +33,11 @@ $(document).ready(function() {
 				if ((insertTxt > year) || (insertTxt < 2008)) {
 					$(this).html(insertTxt);
 				} else {
-					$(this).html("<a href='https://garymomo" + insertTxt + ".github.io'>" + insertTxt + "</a>");
+					if (insertTxt == "2016") {
+						$(this).html("<a href='https://garymomo" + insertTxt + ".github.io/redirection'>" + insertTxt + "</a>");
+					} else {
+						$(this).html("<a href='https://garymomo" + insertTxt + ".github.io'>" + insertTxt + "</a>");
+					}
 				}
 			});
 
