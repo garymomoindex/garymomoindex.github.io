@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	var bkAnimate = false;
 	var showYear = $(".showYear");
 	var year = new Date().getFullYear();
 	var range = year - 2008;
@@ -44,7 +45,13 @@ $(document).ready(function() {
 			return result * rotationSnap;
 		},
 		onDrag : function() {
-
+			if (bkAnimate) {
+				$("#bkYear").css("opacity","1");
+				bkAnimate = false;
+			} else {
+				$("#bkYear").css("opacity","0.8");
+				bkAnimate = true;
+			}
 		}
 	});
 });

@@ -33,12 +33,14 @@
 				$("#yearList").css("display", "none");
 				$(".container-fluid").css("padding-right", "0px");
 				$(".container-fluid").css("padding-left", "0px");
+				$("#bkYear").css("display", "");
 				$("#yearGear").css("display", "");
 				$(".left-video").css("width", "55%");
 			} else {
 				$("#yearList").css("display", "");
 				$(".container-fluid").css("padding-right", "15px");
 				$(".container-fluid").css("padding-left", "15px");
+				$("#bkYear").css("display", "none");
 				$("#yearGear").css("display", "none");
 				$(".left-video").css("width", "90%");
 			}
@@ -175,5 +177,18 @@
 				ease : Bounce.easeOut
 			});
 		}
+	});
+
+	$("#myPink").on("click", function() {
+		console.log("佐佐木彩夏 Hello!!");
+	});
+	$("#myRed").on("click", function() {
+		console.log("百田夏菜子 Hello!!");
+	});
+	$("#myYellow").on("click", function() {
+		console.log("玉井詩織 Hello!!");
+	});
+	$("#myPurple").on("click", function() {
+		console.log("高城蕾妮 Hello!!");
 	});
 });
