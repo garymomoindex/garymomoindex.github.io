@@ -12,7 +12,7 @@
 	var indexVideoTL = null;
 	var indexVideoTL2 = null;
 
-	TweenMax.set(["#lock2", "#lock3", "#lock4", "#lock5", "#lock6", "#smoke"], {
+	TweenMax.set(["#lock2", "#lock3", "#lock4", "#lock5", "#lock6", "#smoke", "#myPink", "#myRed", "#myYellow", "#myPurple"], {
 		alpha : 0
 	});
 
@@ -86,7 +86,7 @@
 				time = Math.floor(Math.random() * 6) + 2;
 				count = Math.floor(Math.random() * 3) + 1;
 				var td = new TweenMax.to($(this), time, {top : setheight * (2), alpha : 0, rotation:(360*count)});
-				gearTL.insert(td,0);
+				gearTL.insert(td, 0);
 			});
 
 			doorTL.to($("#lock1"), 0, {
@@ -146,6 +146,15 @@
 	});
 
 	function nextStep() {
+		var tpu = new TweenMax.to($("#myPurple"), 1, {alpha : 1, ease : Circ.easeIn});
+		gearTL.insert(tpu, 4.5);
+		var tpi = new TweenMax.to($("#myPink"), 1, {alpha : 1, ease : Circ.easeIn});
+		gearTL.insert(tpi, 5);
+		var tye = new TweenMax.to($("#myYellow"), 1, {alpha : 1, ease : Circ.easeIn});
+		gearTL.insert(tye, 5.5);
+		var tre = new TweenMax.to($("#myRed"), 1, {alpha : 1, ease : Circ.easeIn});
+		gearTL.insert(tre, 6);
+
 		gearTL.play();
 	}
 
