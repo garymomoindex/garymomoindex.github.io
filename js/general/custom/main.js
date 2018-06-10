@@ -61,8 +61,8 @@
 			var doorTL = new TimelineMax({onComplete : nextStep});
 			gearTL = new TimelineMax({paused : true});
 
-			var t1 = new TweenMax.to($("#gearG1"), 5, {top : -200, alpha : 0});
-			var t2 = new TweenMax.to($("#gearG2"), 5, {top : setheight * (2), alpha : 0});
+			var t1 = new TweenMax.to($(".shiftGroup1"), 5, {top : -200, alpha : 0});
+			var t2 = new TweenMax.to($(".shiftGroup2"), 5, {top : setheight * (2), alpha : 0});
 
 			gearTL.insert(t1,0).insert(t2,0)
 			.to($(".indexOpen2"), 0, {

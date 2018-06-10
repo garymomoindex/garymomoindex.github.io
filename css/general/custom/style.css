@@ -67,6 +67,14 @@ body {
 	height: 60%;
 	width: 60%;
 }
+#bkGear1 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	height: 100%;
+	width: 100%;
+}
 #gearG2 {
 	position: fixed;
 	top: 45%;
@@ -74,6 +82,14 @@ body {
 	z-index: 10;
 	height: 60%;
 	width: 60%;
+}
+ #bkGear2 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	height: 100%;
+	width: 100%;
 }
 #gearU1 {
 	position: fixed;
