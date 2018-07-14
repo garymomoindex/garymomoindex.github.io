@@ -54,7 +54,7 @@
 		ori_width = width;
 	}
 
-	$("#lock1").on("click", function() {
+	$("#lock1").on("click tap", function() {
 		if (!indexDoorOpen) {
 			indexDoorOpen = true;
 			var doorTL = new TimelineMax();
@@ -189,28 +189,28 @@
 		}
 	});
 
-	$("#myPink").on("click", function() {
+	$("#myPink").on("click tap", function() {
 		if (!indexVideoToggle) {
 			$(".left-video figure").trigger("click");
 		}
 		console.log("佐佐木彩夏 Hello!!");
 	});
 
-	$("#myRed").on("click", function() {
+	$("#myRed").on("click tap", function() {
 		if (!indexVideoToggle) {
 			$(".left-video figure").trigger("click");
 		}
 		console.log("百田夏菜子 Hello!!");
 	});
 
-	$("#myYellow").on("click", function() {
+	$("#myYellow").on("click tap", function() {
 		if (!indexVideoToggle) {
 			$(".left-video figure").trigger("click");
 		}
 		console.log("玉井詩織 Hello!!");
 	});
 
-	$("#myPurple").on("click", function() {
+	$("#myPurple").on("click tap", function() {
 		if (!indexVideoToggle) {
 			$(".left-video figure").trigger("click");
 		}
