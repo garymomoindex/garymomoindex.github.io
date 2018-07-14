@@ -7,7 +7,6 @@
 	var offset = 10;
 	var indexDoorOpen = false;
 	var indexVideoToggle = false;
-	var gearTL = null;
 	var videoGearTL = null;
 	var indexVideoTL = null;
 	var indexVideoTL2 = null;
@@ -58,36 +57,7 @@
 	$("#lock1").on("click", function() {
 		if (!indexDoorOpen) {
 			indexDoorOpen = true;
-			var doorTL = new TimelineMax({onComplete : nextStep});
-			gearTL = new TimelineMax({paused : true});
-
-			var t1 = new TweenMax.to($(".shiftGroup1"), 5, {top : -200, alpha : 0});
-			var t2 = new TweenMax.to($(".shiftGroup2"), 5, {top : setheight * (2), alpha : 0});
-
-			gearTL.insert(t1,0).insert(t2,0)
-			.to($(".indexOpen2"), 0, {
-				zIndex : -5
-			}, "-=0.1");
-
-			$.each($(".shiftUp"), function(key, value) {
-				var time = 0;
-				var count = 0;
-
-				time = Math.floor(Math.random() * 6) + 2;
-				count = Math.floor(Math.random() * 3) + 1;
-				var tu = new TweenMax.to($(this), time, {top : -200, alpha : 0, rotation:(360*count)});
-				gearTL.insert(tu,0);
-			});
-			
-			$.each($(".shiftDown"), function(key, value) {
-				var time = 0;
-				var count = 0;
-
-				time = Math.floor(Math.random() * 6) + 2;
-				count = Math.floor(Math.random() * 3) + 1;
-				var td = new TweenMax.to($(this), time, {top : setheight * (2), alpha : 0, rotation:(360*count)});
-				gearTL.insert(td, 0);
-			});
+			var doorTL = new TimelineMax();
 
 			doorTL.to($("#lock1"), 0, {
 				alpha : 0
@@ -142,10 +112,41 @@
 			.to($(".indexOpen1"), 0, {
 				zIndex : -5
 			}, "-=0.1");
+
+			setTimeout(nextStep, 3300);
 		}
 	});
 
 	function nextStep() {
+		var gearTL = new TimelineMax({paused : true});
+		var t1 = new TweenMax.to($(".shiftGroup1"), 5, {top : -200, alpha : 0});
+		var t2 = new TweenMax.to($(".shiftGroup2"), 5, {top : setheight * (2), alpha : 0});
+
+		gearTL.insert(t1, 0).insert(t2, 0)
+		.to($(".indexOpen2"), 0, {
+			zIndex : -5
+		}, "-=0.1");
+
+		$.each($(".shiftUp"), function(key, value) {
+			var time = 0;
+			var count = 0;
+
+			time = Math.floor(Math.random() * 6) + 2;
+			count = Math.floor(Math.random() * 3) + 1;
+			var tu = new TweenMax.to($(this), time, {top : -200, alpha : 0, rotation:(360*count)});
+			gearTL.insert(tu, 0);
+		});
+		
+		$.each($(".shiftDown"), function(key, value) {
+			var time = 0;
+			var count = 0;
+
+			time = Math.floor(Math.random() * 6) + 2;
+			count = Math.floor(Math.random() * 3) + 1;
+			var td = new TweenMax.to($(this), time, {top : setheight * (2), alpha : 0, rotation:(360*count)});
+			gearTL.insert(td, 0);
+		});
+
 		var tpu = new TweenMax.to($("#myPurple"), 1, {alpha : 1, ease : Circ.easeIn});
 		gearTL.insert(tpu, 4.5);
 		var tpi = new TweenMax.to($("#myPink"), 1, {alpha : 1, ease : Circ.easeIn});
