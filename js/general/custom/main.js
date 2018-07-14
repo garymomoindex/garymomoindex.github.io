@@ -183,7 +183,7 @@
 			});
 
 			indexVideoTL2.to($(".left-video"), 0.5, {
-				left : value * (-1),
+				left : (value * (-1) + 3),
 				ease : Bounce.easeOut
 			});
 		}
