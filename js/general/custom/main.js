@@ -190,15 +190,30 @@
 	});
 
 	$("#myPink").on("click", function() {
+		if (!indexVideoToggle) {
+			$(".left-video figure").trigger("click");
+		}
 		console.log("佐佐木彩夏 Hello!!");
 	});
+
 	$("#myRed").on("click", function() {
+		if (!indexVideoToggle) {
+			$(".left-video figure").trigger("click");
+		}
 		console.log("百田夏菜子 Hello!!");
 	});
+
 	$("#myYellow").on("click", function() {
+		if (!indexVideoToggle) {
+			$(".left-video figure").trigger("click");
+		}
 		console.log("玉井詩織 Hello!!");
 	});
+
 	$("#myPurple").on("click", function() {
+		if (!indexVideoToggle) {
+			$(".left-video figure").trigger("click");
+		}
 		console.log("高城蕾妮 Hello!!");
 	});
 });
