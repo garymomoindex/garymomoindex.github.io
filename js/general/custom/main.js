@@ -159,7 +159,7 @@
 		gearTL.play();
 	}
 
-	$(".left-video figure").on("click", function() {
+	$(".left-video figure").on("mouseenter", function() {
 		if (indexVideoToggle) {
 			indexVideoToggle = false;
 			videoGearTL = new TimelineMax();
@@ -191,28 +191,28 @@
 
 	$("#myPink").on("click", function() {
 		if (!indexVideoToggle) {
-			$(".left-video figure").trigger("click");
+			$(".left-video figure").trigger("mouseenter");
 		}
 		console.log("佐佐木彩夏 Hello!!");
 	});
 
 	$("#myRed").on("click", function() {
 		if (!indexVideoToggle) {
-			$(".left-video figure").trigger("click");
+			$(".left-video figure").trigger("mouseenter");
 		}
 		console.log("百田夏菜子 Hello!!");
 	});
 
 	$("#myYellow").on("click", function() {
 		if (!indexVideoToggle) {
-			$(".left-video figure").trigger("click");
+			$(".left-video figure").trigger("mouseenter");
 		}
 		console.log("玉井詩織 Hello!!");
 	});
 
 	$("#myPurple").on("click", function() {
 		if (!indexVideoToggle) {
-			$(".left-video figure").trigger("click");
+			$(".left-video figure").trigger("mouseenter");
 		}
 		console.log("高城蕾妮 Hello!!");
 	});
