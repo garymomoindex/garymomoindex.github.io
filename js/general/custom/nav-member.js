@@ -1,0 +1,44 @@
+﻿document.writeln("<nav class='navbar navbar-default'>");
+document.writeln("	<div class='container-fluid'>");
+document.writeln("		<div class='navbar-header'>");
+document.writeln("			<button type='button' class='navbar-toggle' id='navbar-toggle-custom' data-toggle='collapse' data-target='#momoNavbar'>");
+document.writeln("				<span class='icon-bar'></span>");
+document.writeln("				<span class='icon-bar'></span>");
+document.writeln("				<span class='icon-bar'></span>");
+document.writeln("			</button>");
+document.writeln("		</div>");
+document.writeln("		<div class='collapse navbar-collapse' id='momoNavbar'>");
+document.writeln("			<ul class='nav navbar-nav'>");
+
+document.writeln("				<li class='dropdown'>");
+document.writeln("					<a class='dropdown-toggle' data-toggle='dropdown'>穿越 -時-<span class='caret'></span></a>");
+document.writeln("					<ul class='dropdown-menu' id='momoNavTime'>");
+document.writeln("						<li><a href='https://ppt.cc/f8FQGx'>2018 -守護四葉-</a></li>");
+document.writeln("						<li><a href='https://ppt.cc/fLylvx'>2017 -綠意青春-</a></li>");
+document.writeln("						<li><a href='https://ppt.cc/fnI0tx'>2016 -自由獨行-</a></li>");
+document.writeln("						<li><a href='https://ppt.cc/f3qmxx'>2015 --</a></li>");
+document.writeln("						<li><a href='https://ppt.cc/fxHgdx'>2014 -飛躍國立-</a></li>");
+document.writeln("						<li><a href='https://ppt.cc/fxxY7x'>2013 -反轉次元-</a></li>");
+document.writeln("						<li><a href='https://ppt.cc/f6yoHx'>2012 -決戰紅白-</a></li>");
+document.writeln("						<li><a href='https://ppt.cc/fyJsgx'>2011 -五境革命-</a></li>");
+document.writeln("						<li><a href='https://ppt.cc/fYhC4x'>2010 -突圍怪盜-</a></li>");
+document.writeln("						<li><a href='https://ppt.cc/f4E9bx'>2009 -舟車苦行-</a></li>");
+document.writeln("						<li><a href='https://ppt.cc/fVlANx'>2008 -破土萌芽-</a></li>");
+document.writeln("					</ul>");
+document.writeln("				</li>");
+
+document.writeln("				<li class='dropdown'>");
+document.writeln("					<a class='dropdown-toggle' data-toggle='dropdown'>四葉 -絆-<span class='caret'></span></a>");
+document.writeln("					<ul class='dropdown-menu' id='momoNavMember'>");
+document.writeln("						<li><a>-若大將- 玉井詩織</a></li>");
+document.writeln("						<li><a>-太陽神- 百田夏菜子</a></li>");
+document.writeln("						<li><a>-BOSS- 佐佐木彩夏</a></li>");
+document.writeln("						<li><a>-鋼鐵娘- 高城蕾妮</a></li>");
+document.writeln("					</ul>");
+document.writeln("				</li>");
+
+document.writeln("				<li><a>Page 3</a></li>");
+document.writeln("			</ul>");
+document.writeln("		</div>");
+document.writeln("	</div>");
+document.writeln("</nav>");

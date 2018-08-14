@@ -12,10 +12,8 @@ document.writeln("<link rel='stylesheet' href='../css/bootstrap-theme.min.css' /
 
 document.writeln("<link rel='stylesheet' href='../css/animate.css' />");
 //custom
-document.writeln("<link rel='stylesheet' href='../css/general/custom/style.css' />");
+document.writeln("<link rel='stylesheet' href='../css/general/custom/style-member.css' />");
 document.writeln("<link rel='stylesheet' href='../css/general/custom/nav.css' />");
-document.writeln("<link rel='stylesheet' href='../css/general/custom/indexVideo.css' />");
-document.writeln("<link rel='stylesheet' href='../css/general/custom/yearGear.css' />");
 document.writeln("<link rel='stylesheet' href='../css/general/custom/foot.css' />");
 
 // JS
