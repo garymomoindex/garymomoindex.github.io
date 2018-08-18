@@ -30,13 +30,18 @@
 		ori_width = width;
 	}
 
-	$(".link-items").on("mouseenter", function() {
+	$(".link-items").on("mouseenter taphold", function() {
 		$(".link-info-up").show();
 		$(".link-info-down").show();
 	});
 
-	$(".link-items").on("mouseleave", function() {
+	$(".link-items").on("mouseleave taphold", function() {
 		$(".link-info-up").hide();
 		$(".link-info-down").hide();
+	});
+
+	$(".link-items").on("click tap", function() {
+		$(".link-info-up").show();
+		$(".link-info-down").show();
 	});
 });
