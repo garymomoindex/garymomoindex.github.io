@@ -40,8 +40,9 @@
 //		$(".link-info-down").hide();
 //	});
 
-	$(".link-items").on("click tap", function() {
+	$(".link-items").on("swipe", function() {
 		$(".link-info-up").show();
 		$(".link-info-down").show();
+		console.log("123");
 	});
 });
