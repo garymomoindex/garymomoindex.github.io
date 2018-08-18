@@ -385,22 +385,61 @@ a, a:link, a:visited, a:hover {
 }
 
 .link-items {
-	margin-top: 2rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
 	color: #ffffff;
 	border-radius: 100px;
 }
-.link-info-up {
-	background-color: white;
-	text-align: center;
+.link-info-up-base {
+	background-color: #ffffff;
+	transform: rotate(9deg);
+	-ms-transform: rotate(9deg);
+	-moz-transform: rotate(9deg);
+	-webkit-transform: rotate(9deg);
+	-o-transform: rotate(9deg);
 	display: none;
+	width: 150%;
+	top: -60px;
+	height: 180px;
+	position: relative;
+}
+.link-info-up {
+	background-color: #ffffff;
+	text-align: center;
+	transform: rotate(9deg);
+	-ms-transform: rotate(9deg);
+	-moz-transform: rotate(9deg);
+	-webkit-transform: rotate(9deg);
+	-o-transform: rotate(9deg);
+	display: none;
+	width: 150%;
+	top: -10px;
+	left: -5%;
+	height: 150px;
+	position: absolute;
 }
 .link-info-down {
-	background-color: white;
+	background-color: #ffffff;
 	text-align: center;
+	transform: rotate(-1deg);
+	-ms-transform: rotate(-1deg);
+	-moz-transform: rotate(-1deg);
+	-webkit-transform: rotate(-1deg);
+	-o-transform: rotate(-1deg);
 	display: none;
+	width: 150%;
+	left: -5%;
+	position: absolute;
+}
+.link-info-down-base {
+	background-color: #ffffff;
+	display: none;
+	width: 150%;
+	height: 100px;
+	position: relative;
 }
 .link-focus:hover {
 	box-shadow: 2px 2px 3rem 0.6rem #ffffff;
