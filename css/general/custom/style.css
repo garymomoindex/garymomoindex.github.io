@@ -383,3 +383,25 @@ body {
 a, a:link, a:visited, a:hover {
 	text-decoration: none;
 }
+
+.link-items {
+	margin-top: 2rem;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #ffffff;
+	border-radius: 100px;
+}
+.link-info-up {
+	background-color: white;
+	text-align: center;
+	display: none;
+}
+.link-info-down {
+	background-color: white;
+	text-align: center;
+	display: none;
+}
+.link-focus:hover {
+	box-shadow: 2px 2px 3rem 0.6rem #ffffff;
+}
