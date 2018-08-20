@@ -38,15 +38,20 @@
 			var linkDownTop = (itemTop + itemOHeight) + linkDownOffset;
 			$(".link-info-down").css("top", linkDownTop + "px");
 			$(".link-info-down").css("height", (footerTop - linkDownTop - linkDownOffset) + "px");
+			if ((footerTop - linkDownTop - linkDownOffset) < 100) {
+				$(".link-info-down-btn span").css("top", "0px");
+			} else {
+				$(".link-info-down-btn span").css("top", "-" + (footerTop - linkDownTop - linkDownOffset)/(1.5) + "px");
+			}
 		}
 	}
 
 	$(".link-items").on("click tap", function() {
-		var itemTop = $(this).position().top;console.log(itemTop);
+		var itemTop = $(this).position().top;
 		var linkUpHeight =  parseInt($(".link-info-up").css("height").substring(0, $(".link-info-up").css("height").indexOf("px")));
 		$(".link-info-up").css(
 			"height", (linkUpHeight + itemTop) + "px"
-		);
+		);console.log(linkUpHeight);
 		$("#link-info-up-title").text("測試上");
 
 		$(".link-info-up-base").show();
@@ -58,11 +63,19 @@
 		var linkDownTop = (itemTop + itemOHeight) + linkDownOffset;
 		$(".link-info-down").css("top", linkDownTop + "px");
 		$(".link-info-down").css("height", (footerTop - linkDownTop) + "px");
-		$("#link-info-down-title").text("測試下");
+		$(".link-info-down-btn span").css("top", "-" + (footerTop - linkDownTop - linkDownOffset) + "px");
 
 		$(".link-info-down").show();
 		$(".link-info-down-base").show();
 
 		linkShowId = $(this).attr("id");
+	});
+
+	$(".glyphicon-remove").on("click tap", function() {
+		$(".link-info-up-base").hide();
+		$(".link-info-up").hide();
+		$(".link-info-down").hide();
+		$(".link-info-down-base").hide();
+		$(".link-info-up").css("height", "150px");
 	});
 });

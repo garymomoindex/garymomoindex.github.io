@@ -387,7 +387,6 @@ a, a:link, a:visited, a:hover {
 .link-items {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	width: 50%;
 	margin-left: auto;
 	margin-right: auto;
 	color: #ffffff;
@@ -441,6 +440,37 @@ a, a:link, a:visited, a:hover {
 	height: 100px;
 	position: relative;
 }
+.link-info-down-btn span {
+	line-height: 3rem;
+	font-size: 8rem;
+	position: absolute;
+	top: 0px;
+}
+@media (min-width: 1201px) {
+	.link-info-down-btn .glyphicon-share-alt {
+		right: 50%;
+	}
+	.link-info-down-btn .glyphicon-remove {
+		right: 36%;
+	}
+}
+@media (max-width: 1200px) {
+	.link-info-down-btn .glyphicon-share-alt {
+		right: 55%;
+	}
+	.link-info-down-btn .glyphicon-remove {
+		right: 38%;
+	}
+}
+@media (max-width: 639px) {
+	.link-info-down-btn .glyphicon-share-alt {
+		right: 65%;
+	}
+	.link-info-down-btn .glyphicon-remove {
+		right: 40%;
+	}
+}
+
 .link-focus:hover {
 	box-shadow: 2px 2px 3rem 0.6rem #ffffff;
 }
