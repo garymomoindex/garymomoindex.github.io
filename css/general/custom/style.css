@@ -530,11 +530,23 @@ a, a:link, a:visited, a:hover {
 	top: 0%;
 	left: -50%;
 }
+.about-items {
+	margin-top: 3rem;
+}
 .about-title {
 	color: #aaaaaa;
-	float: right;
 	font-size: 3rem;
 	line-height: 3.2rem;
+}
+@media (min-width: 768px) {
+	.about-title {
+		float: right;
+	}
+}
+@media (max-width: 767px) {
+	.about-items {
+		text-align: center;
+	}
 }
 .about-info {
 	color: #aaaaaa;

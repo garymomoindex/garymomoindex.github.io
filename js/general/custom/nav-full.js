@@ -38,7 +38,7 @@ document.writeln("					</ul>");
 document.writeln("				</li>");
 
 document.writeln("				<li><a href='https://ppt.cc/f6qcZx'>情報 -繫-</a></li>");
-document.writeln("				<li><a>關於</a></li>");
+document.writeln("				<li><a href='https://ppt.cc/fad5xx'>關於</a></li>");
 document.writeln("			</ul>");
 document.writeln("		</div>");
 document.writeln("	</div>");
