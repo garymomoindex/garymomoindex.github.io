@@ -2,7 +2,7 @@
 	var width = window.innerWidth;
 	var ori_width = "0";
 	var setheight = "0";
-	var linkDownOffset = 50;
+	var linkOffset = 30;
 	var linkShowId = "";
 	var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
 
@@ -12,10 +12,37 @@
 	function resize() {
 		width = window.innerWidth;
 
-		$(".mainContain").css("height","auto");
-		if($(window).height() > $(".mainContain").css("height").substring(0, $(".mainContain").css("height").indexOf("px"))) {
-			setheight = $(window).height();
-			$(".mainContain").css("height", setheight);
+		if (linkShowId != "" && linkShowId != null) {
+			var itemTop = $("#" + linkShowId).position().top;
+			var itemOHeight = $("#" + linkShowId).outerHeight(true);
+			var footerTop = $("footer").position().top;
+			var linkDownTop = (itemTop + itemOHeight) + linkOffset;
+			$(".link-info-down").css("top", linkDownTop + "px");
+			$(".link-info-down").css("height", (footerTop - linkDownTop - linkOffset) + "px");
+
+			itemTop = $("#" + linkShowId).position().top;
+			$(".link-info-up").css(
+					"height", (itemTop - linkOffset) + "px"
+			);
+
+			var fs1 = $("#link-info-up-title").css("font-size");
+			var fs2 = $("#link-info-up-subtitle").css("font-size");
+			var diff = parseInt(fs1.substring(0, fs1.indexOf("px"))) + parseInt(fs2.substring(0, fs2.indexOf("px")));
+			if (width <= 639) {
+				$("#link-info-up-zone").css(
+						"top", (itemTop - linkOffset - 3*diff) + "px"
+				);
+			} else {
+				$("#link-info-up-zone").css(
+						"top", (itemTop - linkOffset - 2*diff) + "px"
+				);
+			}
+		} else {
+			$(".mainContain").css("height","auto");
+			if($(window).height() > $(".mainContain").css("height").substring(0, $(".mainContain").css("height").indexOf("px"))) {
+				setheight = $(window).height();
+				$(".mainContain").css("height", setheight);
+			}
 		}
 
 		if (width != ori_width) {
@@ -30,52 +57,123 @@
 			}
 		}
 		ori_width = width;
-
-		if (linkShowId != "" && linkShowId != null) {
-			var itemTop = $("#" + linkShowId).position().top;
-			var itemOHeight = $("#" + linkShowId).outerHeight(true);
-			var footerTop = $("footer").position().top;
-			var linkDownTop = (itemTop + itemOHeight) + linkDownOffset;
-			$(".link-info-down").css("top", linkDownTop + "px");
-			$(".link-info-down").css("height", (footerTop - linkDownTop - linkDownOffset) + "px");
-			if ((footerTop - linkDownTop - linkDownOffset) < 100) {
-				$(".link-info-down-btn span").css("top", "0px");
-			} else {
-				$(".link-info-down-btn span").css("top", "-" + (footerTop - linkDownTop - linkDownOffset)/(1.5) + "px");
-			}
-		}
 	}
 
 	$(".link-items").on("click tap", function() {
-		var itemTop = $(this).position().top;
-		var linkUpHeight =  parseInt($(".link-info-up").css("height").substring(0, $(".link-info-up").css("height").indexOf("px")));
-		$(".link-info-up").css(
-			"height", (linkUpHeight + itemTop) + "px"
-		);console.log(linkUpHeight);
-		$("#link-info-up-title").text("測試上");
+		if (linkShowId == null || linkShowId == "") {
+			$(".link-show-info").hide();
+			$(this).show();
 
-		$(".link-info-up-base").show();
-		$(".link-info-up").show();
+			var itemTop = $(this).position().top;
+			var itemOHeight = $(this).outerHeight(true);
+			var footerTop = $("footer").position().top;
+			var linkDownTop = (itemTop + itemOHeight) + linkOffset;
+			$(".link-info-down").css("top", linkDownTop + "px");
+			$(".link-info-down").css("height", (footerTop - linkDownTop) + "px");
 
-		itemTop = $(this).position().top;
-		var itemOHeight = $(this).outerHeight(true);
-		var footerTop = $("footer").position().top;
-		var linkDownTop = (itemTop + itemOHeight) + linkDownOffset;
-		$(".link-info-down").css("top", linkDownTop + "px");
-		$(".link-info-down").css("height", (footerTop - linkDownTop) + "px");
-		$(".link-info-down-btn span").css("top", "-" + (footerTop - linkDownTop - linkDownOffset) + "px");
+			$(".link-info-down").show();
 
-		$(".link-info-down").show();
-		$(".link-info-down-base").show();
+			itemTop = $(this).position().top;
+			$(".link-info-up").css(
+					"height", (itemTop - linkOffset) + "px"
+			);
 
-		linkShowId = $(this).attr("id");
+			linkShowId = $(this).attr("id");
+			if (linkShowId == "link1") {
+				$("#link-info-up-title").text("官方網站");
+				$("#link-info-goto").attr("href", "http://www.momoclo.net/");
+			} else if (linkShowId == "link2") {
+				$("#link-info-up-title").text("官方會員專區");
+				$("#link-info-up-subtitle").text("(日本)");
+				$("#link-info-goto").attr("href", "https://fc.momoclo.net/pc/login.php");
+			} else if (linkShowId == "link3") {
+				$("#link-info-up-title").text("海外會員專區");
+				$("#link-info-up-subtitle").text("(海外-英語)");
+				$("#link-info-goto").attr("href", "http://fc.momoclo.net/pc/demo/");
+			} else if (linkShowId == "link4") {
+				$("#link-info-up-title").text("官方周邊商店");
+				$("#link-info-goto").attr("href", "http://harue-shouten.jp/");
+			} else if (linkShowId == "link5") {
+				$("#link-info-up-title").text("EVILLINE");
+				$("#link-info-up-subtitle").text("隸屬國王唱片獨立品牌");
+				$("#link-info-goto").attr("href", "http://www.evilline.com/momoclo/");
+			} else if (linkShowId == "link6") {
+				$("#link-info-up-title").text("星塵的偶像行星");
+				$("#link-info-up-subtitle").text("隸屬星塵事務所");
+				$("#link-info-goto").attr("href", "http://www.stardustplanet.jp/");
+			} else if (linkShowId == "link7") {
+				$("#link-info-up-title").text("星塵事務所");
+				$("#link-info-goto").attr("href", "http://www.stardust.co.jp/stardustplanet/");
+			} else if (linkShowId == "link8") {
+				$("#link-info-up-title").text("官方推特");
+				$("#link-info-goto").attr("href", "https://twitter.com/momorikobuta517");
+			} else if (linkShowId == "link9") {
+				$("#link-info-up-title").text("官方推特");
+				$("#link-info-up-subtitle").text("Live專用");
+				$("#link-info-goto").attr("href", "https://twitter.com/information_mcz");
+			} else if (linkShowId == "link10") {
+				$("#link-info-up-title").text("官方推特");
+				$("#link-info-up-subtitle").text("經紀人kwkm自肥");
+				$("#link-info-goto").attr("href", "https://twitter.com/momowgp");
+			} else if (linkShowId == "link11") {
+				$("#link-info-up-title").text("EVILLINE推特");
+				$("#link-info-up-subtitle").text("隸屬國王唱片獨立品牌");
+				$("#link-info-goto").attr("href", "https://twitter.com/evillinerecords");
+			} else if (linkShowId == "link12") {
+				$("#link-info-up-title").text("國王唱片專區推特");
+				$("#link-info-goto").attr("href", "https://twitter.com/momoclo_king_pr");
+			} else if (linkShowId == "link13") {
+				$("#link-info-up-title").text("星塵的偶像行星推特");
+				$("#link-info-up-subtitle").text("隸屬星塵事務所");
+				$("#link-info-goto").attr("href", "https://twitter.com/stapla_official");
+			} else if (linkShowId == "link14") {
+				$("#link-info-up-title").text("官方專頁");
+				$("#link-info-goto").attr("href", "https://www.facebook.com/momoirocloverzofficial/");
+			} else if (linkShowId == "link15") {
+				$("#link-info-up-title").text("官方頻道");
+				$("#link-info-goto").attr("href", "https://www.youtube.com/user/MCZofficial");
+			} else if (linkShowId == "link16") {
+				$("#link-info-up-title").text("官方生活頻道");
+				$("#link-info-goto").attr("href", "https://www.youtube.com/channel/UC7pcEjI2U2vg6CqgbwIpjgg/");
+			} else if (linkShowId == "link17") {
+				$("#link-info-up-title").text("官方頻道");
+				$("#link-info-goto").attr("href", "http://www.ustream.tv/channel/momoclotv");
+			} else if (linkShowId == "link18") {
+				$("#link-info-up-title").text("星塵YouTube頻道");
+				$("#link-info-goto").attr("href", "https://www.youtube.com/user/stardustdigital");
+			} else if (linkShowId == "link19") {
+				$("#link-info-up-title").text("星塵Channel");
+				$("#link-info-goto").attr("href", "http://stardust-ch.jp/movie/tag/?searchWord=%E3%82%82%E3%82%82%E3%81%84%E3%82%8D%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%90%E3%83%BCZ");
+			} else if (linkShowId == "link20") {
+				$("#link-info-up-title").text("舊3B YouTube頻道");
+				$("#link-info-goto").attr("href", "https://www.youtube.com/user/3BjuniorOfficial");
+			}
+
+			var fs1 = $("#link-info-up-title").css("font-size");
+			var fs2 = $("#link-info-up-subtitle").css("font-size");
+			var diff = parseInt(fs1.substring(0, fs1.indexOf("px"))) + parseInt(fs2.substring(0, fs2.indexOf("px")));
+			if (width <= 639) {
+				$("#link-info-up-zone").css(
+						"top", (itemTop - linkOffset - 3*diff) + "px"
+				);
+			} else {
+				$("#link-info-up-zone").css(
+						"top", (itemTop - linkOffset - 2*diff) + "px"
+				);
+			}
+
+			$(".link-info-up").show();
+		}
 	});
 
 	$(".glyphicon-remove").on("click tap", function() {
-		$(".link-info-up-base").hide();
+		$("#link-info-up-title").text("");
+		$("#link-info-up-subtitle").text("");
+		$("#link-info-goto").attr("href", "javascript:void(0);");
 		$(".link-info-up").hide();
 		$(".link-info-down").hide();
-		$(".link-info-down-base").hide();
-		$(".link-info-up").css("height", "150px");
+		$(".link-show-info").show();
+		linkShowId = null;
+		resize();
 	});
 });
