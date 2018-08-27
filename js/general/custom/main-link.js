@@ -165,6 +165,7 @@
 			}
 
 			$(".link-info-up").show();
+			location.hash = "#link-info-up-main";
 			$("#link-info-up-main").css("animation-duration", "1S").
 			addClass("animated fadeInRight");
 		}
