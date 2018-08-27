@@ -168,12 +168,16 @@
 			location.hash = "#top";
 			$("#link-info-up-main").css("animation-duration", "1S").
 			addClass("animated fadeInRight");
+			$("#link-info-up-title").css("animation-duration", "1S").
+			addClass("animated fadeInDown delay-1s");
+			$("#link-info-up-subtitle").css("animation-duration", "1S").
+			addClass("animated fadeInDown delay-2s");
 		}
 	});
 
 	$(".glyphicon-remove").on("click tap", function() {
-		$("#link-info-up-title").text("");
-		$("#link-info-up-subtitle").text("");
+		$("#link-info-up-title").text("").removeClass("animated fadeInDown delay-1s");
+		$("#link-info-up-subtitle").text("").removeClass("animated fadeInDown delay-2s");
 		$("#link-info-goto").attr("href", "javascript:void(0);");
 		$(".link-info-up").hide().removeClass("animated fadeInRight");
 		$(".link-info-down").hide().removeClass("animated fadeInUp");
@@ -183,7 +187,7 @@
 		linkShowId = null;
 		resize();
 	});
-	
+
 	$(".glyphicon-remove").on(animationEnd, addMyAnimation);
 
 	function addMyAnimation() {
