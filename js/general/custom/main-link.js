@@ -62,7 +62,7 @@
 	$(".link-items").on("click tap", function() {
 		if (linkShowId == null || linkShowId == "") {
 			$(".link-show-info").hide();
-			$(this).show();
+			$(this).show().addClass("animated pulse infinite");
 
 			var itemTop = $(this).position().top;
 			var itemOHeight = $(this).outerHeight(true);
@@ -72,6 +72,8 @@
 			$(".link-info-down").css("height", (footerTop - linkDownTop) + "px");
 
 			$(".link-info-down").show();
+			$("#link-info-down-main").css("animation-duration", "1.5S").
+			addClass("animated fadeInUp");
 
 			itemTop = $(this).position().top;
 			$(".link-info-up").css(
@@ -163,6 +165,8 @@
 			}
 
 			$(".link-info-up").show();
+			$("#link-info-up-main").css("animation-duration", "1S").
+			addClass("animated fadeInRight");
 		}
 	});
 
@@ -170,10 +174,24 @@
 		$("#link-info-up-title").text("");
 		$("#link-info-up-subtitle").text("");
 		$("#link-info-goto").attr("href", "javascript:void(0);");
-		$(".link-info-up").hide();
-		$(".link-info-down").hide();
+		$(".link-info-up").hide().removeClass("animated fadeInRight");
+		$(".link-info-down").hide().removeClass("animated fadeInUp");
 		$(".link-show-info").show();
+		$("#" + linkShowId).removeClass("animated pulse infinite");
+		location.hash = "#" + linkShowId;
 		linkShowId = null;
 		resize();
 	});
+	
+	$(".glyphicon-remove").on(animationEnd, addMyAnimation);
+
+	function addMyAnimation() {
+		$(this).removeClass("rotateIn").off(animationEnd).on(animationEnd, addMyAnimationNext);
+	}
+
+	function addMyAnimationNext() {
+	    setTimeout(function () {
+	    	$(this).addClass("rotateIn").off(animationEnd).on(animationEnd, addMyAnimation);
+	    }, 1000);
+	}
 });
