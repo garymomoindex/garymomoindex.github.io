@@ -56,3 +56,14 @@ document.writeln("			</ul>");
 document.writeln("		</div>");
 document.writeln("	</div>");
 document.writeln("</nav>");
+
+$(document).ready(function() {
+	$(".dropdown-submenu>a").on("click tap", function(e) {
+		$(this).next("ul").toggle();
+		e.stopPropagation();
+	});
+
+	$('#momoNavbar').on("hide.bs.dropdown", function () {
+		$(".dropdown-submenu .dropdown-menu").hide();
+	});
+});
