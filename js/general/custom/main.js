@@ -105,11 +105,11 @@
 
 	function nextStep1() {
 
-		$(".shiftLeft").css("animation-duration", "2S").
+		$(".shiftLeft").css("animation-duration", "2s").
 		addClass("animated slideOutLeft").one(animationEnd, function() {
 			$(".indexOpen1").css("z-index", "-5");
 		});
-		$(".shiftRight").css("animation-duration", "2S").
+		$(".shiftRight").css("animation-duration", "2s").
 		addClass("animated slideOutRight").one(animationEnd, function() {
 			$(".indexOpen1").css("z-index", "-5");
 		});
@@ -151,11 +151,11 @@
 
 		gearTL.play();
 
-		$(".shiftGroup1").css("animation-duration", "5S").
+		$(".shiftGroup1").css("animation-duration", "5s").
 		addClass("animated fadeOutUp").one(animationEnd, function() {
 			$(".indexOpen2").css("z-index", "-5");
 		});
-		$(".shiftGroup2").css("animation-duration", "5S").
+		$(".shiftGroup2").css("animation-duration", "5s").
 		addClass("animated fadeOutDown").one(animationEnd, function() {
 			$(".indexOpen2").css("z-index", "-5");
 		});

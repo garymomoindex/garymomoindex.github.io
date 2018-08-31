@@ -72,12 +72,12 @@
 			$(".link-info-down").css("height", (footerTop - linkDownTop) + "px");
 
 			$(".link-info-down").show();
-			$("#link-info-down-main").css("animation-duration", "1.5S").
+			$("#link-info-down-main").css("animation-duration", "1.5s").
 			addClass("animated fadeInUp");
 
 			itemTop = $(this).position().top;
 			$(".link-info-up").css(
-					"height", (itemTop - linkOffset) + "px"
+				"height", (itemTop - linkOffset) + "px"
 			);
 
 			linkShowId = $(this).attr("id");
@@ -156,21 +156,21 @@
 			var diff = parseInt(fs1.substring(0, fs1.indexOf("px"))) + parseInt(fs2.substring(0, fs2.indexOf("px")));
 			if (width <= 639) {
 				$("#link-info-up-zone").css(
-						"top", (itemTop - linkOffset - 3*diff) + "px"
+					"top", (itemTop - linkOffset - 3*diff) + "px"
 				);
 			} else {
 				$("#link-info-up-zone").css(
-						"top", (itemTop - linkOffset - 2*diff) + "px"
+					"top", (itemTop - linkOffset - 2*diff) + "px"
 				);
 			}
 
 			$(".link-info-up").show();
 			location.hash = "#top";
-			$("#link-info-up-main").css("animation-duration", "1S").
+			$("#link-info-up-main").css("animation-duration", "1s").
 			addClass("animated fadeInRight");
-			$("#link-info-up-title").css("animation-duration", "1S").
+			$("#link-info-up-title").css("animation-duration", "1s").
 			addClass("animated fadeInDown delay-1s");
-			$("#link-info-up-subtitle").css("animation-duration", "1S").
+			$("#link-info-up-subtitle").css("animation-duration", "1s").
 			addClass("animated fadeInDown delay-2s");
 		}
 	});
