@@ -165,7 +165,7 @@
 			}
 
 			$(".link-info-up").show();
-			location.hash = "#top";
+			$("html, body").animate({scrollTop: $("#top").offset().top}, 200);
 			$("#link-info-up-main").css("animation-duration", "1s").
 			addClass("animated fadeInRight");
 			$("#link-info-up-title").css("animation-duration", "1s").
@@ -183,7 +183,7 @@
 		$(".link-info-down").hide().removeClass("animated fadeInUp");
 		$(".link-show-info").show();
 		$("#" + linkShowId).removeClass("animated pulse infinite");
-		location.hash = "#" + linkShowId;
+		$("html, body").animate({scrollTop: $("#" + linkShowId).offset().top}, 200);
 		linkShowId = null;
 		resize();
 	});
