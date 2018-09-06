@@ -165,6 +165,7 @@
 			}
 
 			$(".link-info-up").show();
+			resize();
 			$("html, body").animate({scrollTop: $("#top").offset().top}, 200);
 			$("#link-info-up-main").css("animation-duration", "1s").
 			addClass("animated fadeInRight");
