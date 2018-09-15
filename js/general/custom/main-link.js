@@ -144,9 +144,13 @@
 				$("#link-info-up-title").text("星塵YouTube頻道");
 				$("#link-info-goto").attr("href", "https://www.youtube.com/user/stardustdigital");
 			} else if (linkShowId == "link19") {
+				$("#link-info-up-title").text("舊官方部落格");
+				$("#link-info-up-subtitle").text("含6人，記錄2011-1-31以前");
+				$("#link-info-goto").attr("href", "http://star-studio.jp/momoclo/");
+			} else if (linkShowId == "link20") {
 				$("#link-info-up-title").text("星塵Channel");
 				$("#link-info-goto").attr("href", "http://stardust-ch.jp/movie/tag/?searchWord=%E3%82%82%E3%82%82%E3%81%84%E3%82%8D%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%90%E3%83%BCZ");
-			} else if (linkShowId == "link20") {
+			} else if (linkShowId == "link21") {
 				$("#link-info-up-title").text("舊3B YouTube頻道");
 				$("#link-info-goto").attr("href", "https://www.youtube.com/user/3BjuniorOfficial");
 			}
