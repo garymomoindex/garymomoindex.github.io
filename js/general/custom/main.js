@@ -55,6 +55,15 @@
 		ori_width = width;
 	}
 
+	var urlParam = window.location.search.split("visit=")[1] ? window.location.search.split("visit=")[1] : "false";
+	if (urlParam == "true") {
+		$(".indexOpen1").hide();
+		$(".indexOpen1").css("z-index", "-5");
+		$(".indexOpen2").hide();
+		$(".indexOpen2").css("z-index", "-5");
+		nextStep2();
+	}
+
 	$("#lock1").on("click tap", function() {
 		if (!indexDoorOpen) {
 			indexDoorOpen = true;
