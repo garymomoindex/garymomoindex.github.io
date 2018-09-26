@@ -61,7 +61,19 @@
 		$(".indexOpen1").css("z-index", "-5");
 		$(".indexOpen2").hide();
 		$(".indexOpen2").css("z-index", "-5");
-		nextStep2();
+
+		var skipTL = new TimelineMax({paused : true});
+
+		var sTpu = new TweenMax.to($("#myPurple"), 1, {alpha : 1, ease : Circ.easeIn});
+		skipTL.insert(sTpu, 1.5);
+		var sTpi = new TweenMax.to($("#myPink"), 1, {alpha : 1, ease : Circ.easeIn});
+		skipTL.insert(sTpi, 2);
+		var sTye = new TweenMax.to($("#myYellow"), 1, {alpha : 1, ease : Circ.easeIn});
+		skipTL.insert(sTye, 2.5);
+		var sTre = new TweenMax.to($("#myRed"), 1, {alpha : 1, ease : Circ.easeIn});
+		skipTL.insert(sTre, 3);
+
+		skipTL.play();
 	}
 
 	$("#lock1").on("click tap", function() {
