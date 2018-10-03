@@ -525,10 +525,8 @@ a, a:link, a:visited, a:hover {
 	overflow: hidden;
 }
 #about-img img {
-	width: 200%;
+	width: 100%;
 	position: relative;
-	top: 0%;
-	left: -50%;
 }
 .about-items {
 	margin-top: 3rem;
@@ -542,14 +540,24 @@ a, a:link, a:visited, a:hover {
 	.about-title {
 		float: right;
 	}
+	#about-img img {
+		top: 0%;
+	}
 }
 @media (max-width: 767px) {
 	.about-items {
 		text-align: center;
+		padding: 1rem;
+	}
+	#about-img img {
+		top: 10%;
 	}
 }
 .about-info {
 	color: #aaaaaa;
 	font-size: 2rem;
 	line-height: 3.2rem;
+}
+.about-info-img {
+	width: 15%;
 }
