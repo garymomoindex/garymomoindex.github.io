@@ -9,10 +9,14 @@ $(document).ready(function() {
 		if ((insertTxt > year) || (insertTxt < 2008)) {
 			$(this).html(insertTxt);
 		} else {
-			if (insertTxt == "2016") {
-				$(this).html("<a href='https://garymomo" + insertTxt + ".github.io/redirection'>" + insertTxt + "</a>");
+			if (tempDisableGear(insertTxt)) {
+				$(this).html("<a href='https://ppt.cc/fZP67x'>" + insertTxt + "</a>");
 			} else {
-				$(this).html("<a href='https://garymomo" + insertTxt + ".github.io'>" + insertTxt + "</a>");
+				if (insertTxt == "2016") {
+					$(this).html("<a href='https://garymomo" + insertTxt + ".github.io/redirection'>" + insertTxt + "</a>");
+				} else {
+					$(this).html("<a href='https://garymomo" + insertTxt + ".github.io'>" + insertTxt + "</a>");
+				}
 			}
 		}
 	});
@@ -34,10 +38,14 @@ $(document).ready(function() {
 				if ((insertTxt > year) || (insertTxt < 2008)) {
 					$(this).html(insertTxt);
 				} else {
-					if (insertTxt == "2016") {
-						$(this).html("<a href='https://garymomo" + insertTxt + ".github.io/redirection'>" + insertTxt + "</a>");
+					if (tempDisableGear(insertTxt)) {
+						$(this).html("<a href='https://ppt.cc/fZP67x'>" + insertTxt + "</a>");
 					} else {
-						$(this).html("<a href='https://garymomo" + insertTxt + ".github.io'>" + insertTxt + "</a>");
+						if (insertTxt == "2016") {
+							$(this).html("<a href='https://garymomo" + insertTxt + ".github.io/redirection'>" + insertTxt + "</a>");
+						} else {
+							$(this).html("<a href='https://garymomo" + insertTxt + ".github.io'>" + insertTxt + "</a>");
+						}
 					}
 				}
 			});
@@ -49,3 +57,11 @@ $(document).ready(function() {
 		}
 	});
 });
+
+function tempDisableGear(txt) {
+	var notOK = 2017
+	if (parseInt(txt) <= notOK) {
+		return true;
+	}
+	return false;
+}
