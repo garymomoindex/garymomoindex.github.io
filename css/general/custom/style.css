@@ -539,6 +539,10 @@ a, a:link, a:visited, a:hover {
 @media (min-width: 768px) {
 	.about-title {
 		float: right;
+		word-break: break-all;
+	}
+	.about-items {
+		padding-right: 10%;
 	}
 	#about-img img {
 		top: 0%;
