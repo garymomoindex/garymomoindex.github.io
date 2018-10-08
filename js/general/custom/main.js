@@ -240,3 +240,7 @@
 		console.log("高城蕾妮 Hello!!");
 	});
 });
+
+$(window).on("load", function() {
+	$(".loader").hide();
+});
