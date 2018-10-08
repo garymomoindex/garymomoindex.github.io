@@ -337,7 +337,7 @@ body {
 
 #indexBK {
 	position: fixed;
-	background-color: #444444;
+	background-color: #000000;
 	top: 0px;
 	left: 0px;
 	z-index: -5;
