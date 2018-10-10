@@ -31,3 +31,7 @@
 		ori_width = width;
 	}
 });
+
+$(window).on("load", function() {
+	$(".loader").hide();
+});

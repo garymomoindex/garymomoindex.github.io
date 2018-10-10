@@ -69,3 +69,7 @@ function isScrolledToView(elem) {
     var elemBottom = elemTop + $(elem).height();
     return (elemTop <= docViewBottom);
 }
+
+$(window).on("load", function() {
+	$(".loader").hide();
+});
