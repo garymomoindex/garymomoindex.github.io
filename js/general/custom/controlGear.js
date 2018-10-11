@@ -10,7 +10,7 @@ $(document).ready(function() {
 			$(this).html(insertTxt);
 		} else {
 			if (tempDisableGear(insertTxt)) {
-				$(this).html("<a href='https://ppt.cc/fZP67x'>" + insertTxt + "</a>");
+				$(this).html("<a href='https://garymomo2008.github.io/unwork'>" + insertTxt + "</a>");
 			} else {
 				if (insertTxt == "2016") {
 					$(this).html("<a href='https://garymomo" + insertTxt + ".github.io/redirection'>" + insertTxt + "</a>");
@@ -39,7 +39,7 @@ $(document).ready(function() {
 					$(this).html(insertTxt);
 				} else {
 					if (tempDisableGear(insertTxt)) {
-						$(this).html("<a href='https://ppt.cc/fZP67x'>" + insertTxt + "</a>");
+						$(this).html("<a href='https://garymomo2008.github.io/unwork'>" + insertTxt + "</a>");
 					} else {
 						if (insertTxt == "2016") {
 							$(this).html("<a href='https://garymomo" + insertTxt + ".github.io/redirection'>" + insertTxt + "</a>");

@@ -72,4 +72,10 @@ function isScrolledToView(elem) {
 
 $(window).on("load", function() {
 	$(".loader").hide();
+	var setheight = "0";
+	$(".mainContain").css("height","auto");
+	if($(window).height() > $(".mainContain").css("height").substring(0, $(".mainContain").css("height").indexOf("px"))) {
+		setheight = $(window).height();
+		$(".mainContain").css("height", setheight);
+	}
 });
