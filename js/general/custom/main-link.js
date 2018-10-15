@@ -188,7 +188,7 @@
 		$(".link-info-down").hide().removeClass("animated fadeInUp");
 		$(".link-show-info").show();
 		$("#" + linkShowId).removeClass("animated pulse infinite");
-		$("html, body").animate({scrollTop: $("#" + linkShowId).offset().top}, 200);
+		$("html, body").animate({scrollTop: $("#" + linkShowId).offset().top}, 0);
 		linkShowId = null;
 		resize();
 	});
