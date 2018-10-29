@@ -52,8 +52,6 @@ function load_items() {
 			var id = $(this).attr("id");
 			if (id == "t1") {
 				timeBase = 1.8;
-			} else if (id == "t2") {
-				timeBase = 2.4;
 			} else if (id == "t3") {
 				timeBase = 2.2;
 			}
