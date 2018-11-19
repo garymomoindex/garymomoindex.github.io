@@ -71,6 +71,9 @@ body {
 .show-pink {
 	color: #f596aa;
 }
+.brand-pink a, .brand-pink a:link, .brand-pink a:visited, .brand-pink a:hover {
+	color: #f596aa;
+}
 .show-yellow {
 	color: #ffb11b;
 }
@@ -97,6 +100,13 @@ body {
 	font-size: 2rem;
 	line-height: 2.8rem;
 	word-break: break-all;
+}
+.showWord a {
+	font-family: "Noto Sans TC", sans-serif;
+	font-weight: 900;
+}
+.showWord img {
+	width: 50px;
 }
 
 .btn {

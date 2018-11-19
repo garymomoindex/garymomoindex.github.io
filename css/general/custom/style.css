@@ -477,11 +477,12 @@ a, a:link, a:visited, a:hover {
 .link-info-down-btn span {
 	color: #aaaaaa;
 	text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
-	font-size: 8rem;
+	font-size: 6rem;
+	top: 1.5rem;
 	position: absolute;
 }
 @media (min-width: 1201px) {
-	.link-info-down-btn .glyphicon-share-alt {
+	.link-info-down-btn .glyphicon-log-in {
 		right: 20%;
 	}
 	.link-info-down-btn .glyphicon-remove {
@@ -492,7 +493,7 @@ a, a:link, a:visited, a:hover {
 	}
 }
 @media (max-width: 1200px) {
-	.link-info-down-btn .glyphicon-share-alt {
+	.link-info-down-btn .glyphicon-log-in {
 		right: 30%;
 	}
 	.link-info-down-btn .glyphicon-remove {
@@ -503,7 +504,7 @@ a, a:link, a:visited, a:hover {
 	}
 }
 @media (max-width: 639px) {
-	.link-info-down-btn .glyphicon-share-alt {
+	.link-info-down-btn .glyphicon-log-in {
 		right: 45%;
 	}
 	.link-info-down-btn .glyphicon-remove {
