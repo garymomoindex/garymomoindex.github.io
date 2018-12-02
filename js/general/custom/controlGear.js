@@ -59,7 +59,7 @@ $(document).ready(function() {
 });
 
 function tempDisableGear(txt) {
-	var notOK = 2017
+	var notOK = 2016
 	if (parseInt(txt) <= notOK) {
 		return true;
 	}
