@@ -4,7 +4,6 @@
 	var setheight = "0";
 	var linkOffset = 30;
 	var linkShowId = "";
-	var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
 
 	resize();
 	$(window).on("resize", resize);
@@ -62,7 +61,7 @@
 	$(".link-items").on("click tap", function() {
 		if (linkShowId == null || linkShowId == "") {
 			$(".link-show-info").hide();
-			$(this).show().addClass("animated pulse infinite");
+			$(this).show();
 
 			var itemTop = $(this).position().top;
 			var itemOHeight = $(this).outerHeight(true);
@@ -72,8 +71,8 @@
 			$(".link-info-down").css("height", (footerTop - linkDownTop) + "px");
 
 			$(".link-info-down").show();
-			$("#link-info-down-main").css("animation-duration", "1.5s").
-			addClass("animated fadeInUp");
+			var downMainTL = new TimelineMax();
+			downMainTL.from($("#link-info-down-main"), 0.6, { scale: 1.4, opacity: 0.1 });
 
 			itemTop = $(this).position().top;
 			$(".link-info-up").css(
@@ -171,39 +170,24 @@
 			$(".link-info-up").show();
 			resize();
 			$("html, body").animate({scrollTop: $("#top").offset().top}, 200);
-			$("#link-info-up-main").css("animation-duration", "1s").
-			addClass("animated fadeInRight");
-			$("#link-info-up-title").css("animation-duration", "1s").
-			addClass("animated fadeInDown delay-1s");
-			$("#link-info-up-subtitle").css("animation-duration", "1s").
-			addClass("animated fadeInDown delay-2s");
+			var upMainTL = new TimelineMax();
+			upMainTL.from($("#link-info-up-main"), 0.6, { scale: 0.6, opacity: 0.1 })
+			.from($("#link-info-up-title"), 1, { scale: 1.2, opacity: 0 })
+			.from($("#link-info-up-subtitle"), 1, { scale: 1.2, opacity: 0 });
 		}
 	});
 
 	$(".glyphicon-remove").on("click tap", function() {
-		$("#link-info-up-title").text("").removeClass("animated fadeInDown delay-1s");
-		$("#link-info-up-subtitle").text("").removeClass("animated fadeInDown delay-2s");
+		$("#link-info-up-title").text("");
+		$("#link-info-up-subtitle").text("");
 		$("#link-info-goto").attr("href", "javascript:void(0);");
-		$(".link-info-up").hide().removeClass("animated fadeInRight");
-		$(".link-info-down").hide().removeClass("animated fadeInUp");
+		$(".link-info-up").hide();
+		$(".link-info-down").hide();
 		$(".link-show-info").show();
-		$("#" + linkShowId).removeClass("animated pulse infinite");
 		$("html, body").animate({scrollTop: $("#" + linkShowId).offset().top}, 0);
 		linkShowId = null;
 		resize();
 	});
-
-	$(".glyphicon-remove").on(animationEnd, addMyAnimation);
-
-	function addMyAnimation() {
-		$(this).removeClass("rotateIn").off(animationEnd).on(animationEnd, addMyAnimationNext);
-	}
-
-	function addMyAnimationNext() {
-	    setTimeout(function () {
-	    	$(this).addClass("rotateIn").off(animationEnd).on(animationEnd, addMyAnimation);
-	    }, 1000);
-	}
 });
 
 $(window).on("load", function() {

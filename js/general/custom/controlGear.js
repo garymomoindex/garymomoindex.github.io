@@ -2,7 +2,6 @@ $(document).ready(function() {
 	var showYear = $(".showYear");
 	var year = new Date().getFullYear();
 	var range = year - 2008;
-	var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
 
 	$.each(showYear, function(key, value) {
 		var insertTxt = year + 1 - key;

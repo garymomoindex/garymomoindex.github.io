@@ -2,7 +2,6 @@
 	var width = window.innerWidth;
 	var ori_width = "0";
 	var setheight = "0";
-	var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
 
 	resize();
 	$(window).on("resize", resize);
@@ -48,14 +47,22 @@
 function load_items() {
 	$(".itemBox").each(function(k, v) {
 		if(isScrolledToView(this)) {
-			var timeBase = 0;
 			var id = $(this).attr("id");
 			if (id == "t1") {
-				timeBase = 1.8;
+				if (!$(this).hasClass("Done")) {
+					var loadTL = new TimelineMax();
+					loadTL.to($(this), 0.1, { scale: 1.4 });
+					loadTL.to($(this), 0.9, { scale: 1, ease:Bounce.easeOut });
+				}
+				$(this).addClass("Done");
 			} else if (id == "t3") {
-				timeBase = 2.2;
+				if (!$(this).hasClass("Done")) {
+					var loadTL = new TimelineMax();
+					loadTL.to($(this), 0.1, { scale: 1.4 });
+					loadTL.to($(this), 1.2, { scale: 1, ease:Bounce.easeOut });
+				}
+				$(this).addClass("Done");
 			}
-			$(this).css("animation-duration", timeBase+"S").addClass("animated bounceIn");
 		}
 	});
 }

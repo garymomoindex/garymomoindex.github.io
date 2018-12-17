@@ -2,7 +2,6 @@
 	var width = window.innerWidth;
 	var ori_width = "0";
 	var setheight = "0";
-	var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
 
 	resize();
 	$(window).on("resize", resize);
