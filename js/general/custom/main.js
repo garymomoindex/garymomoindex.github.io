@@ -61,6 +61,9 @@
 		$(".indexOpen1").css("z-index", "-5");
 		$(".indexOpen2").hide();
 		$(".indexOpen2").css("z-index", "-5");
+		
+		var skipBkYearTL = new TimelineMax({ repeat: -1, yoyo: true });
+		skipBkYearTL.to($("#bkYear"), 1, { scale: 1.2 });
 
 		var skipTL = new TimelineMax({paused : true});
 
