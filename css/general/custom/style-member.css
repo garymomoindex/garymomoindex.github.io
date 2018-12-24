@@ -65,7 +65,13 @@ body {
 .show-red {
 	color: #e83015;
 }
+.brand-red a, .brand-red a:link, .brand-red a:visited, .brand-red a:hover {
+	color: #e83015;
+}
 .show-purple {
+	color: #986db2;
+}
+.brand-purple a, .brand-purple a:link, .brand-purple a:visited, .brand-purple a:hover {
 	color: #986db2;
 }
 .show-pink {
@@ -75,6 +81,9 @@ body {
 	color: #f596aa;
 }
 .show-yellow {
+	color: #ffb11b;
+}
+.brand-yellow a, .brand-yellow a:link, .brand-yellow a:visited, .brand-yellow a:hover {
 	color: #ffb11b;
 }
 
