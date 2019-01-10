@@ -117,12 +117,14 @@
 			.to($("#smoke"), 0.7, {
 				top : (setheight/3),
 				alpha : 0.8,
-				scale : 1.5
+				scale : 1.5,
+				ease:Linear.easeNone
 			})
 			.to($("#smoke"), 0.7, {
 				top : (setheight*2/3),
 				alpha : 0,
-				scale : 2
+				scale : 2,
+				ease:Power4.easeOut
 			})
 			.to($(".shiftLeft"), 2.5, {
 				left : width * (-200),
@@ -151,8 +153,8 @@
 		bkYearTL.to($("#bkYear"), 1, { scale: 1.2 });
 
 		var gearTL = new TimelineMax({paused : true});
-		var t1 = new TweenMax.to($(".shiftGroup1"), 5, {top : -200, alpha : 0});
-		var t2 = new TweenMax.to($(".shiftGroup2"), 5, {top : setheight * (2), alpha : 0});
+		var t1 = new TweenMax.to($(".shiftGroup1"), 5, {top : -200, alpha : 0, ease:Linear.easeNone});
+		var t2 = new TweenMax.to($(".shiftGroup2"), 5, {top : setheight * (2), alpha : 0, ease:Linear.easeNone});
 
 		gearTL.insert(t1, 0).insert(t2, 0)
 		.to($(".indexOpen2"), 0, {
@@ -163,9 +165,9 @@
 			var time = 0;
 			var count = 0;
 
-			time = Math.floor(Math.random() * 1) + 2;
+			time = Math.floor(Math.random() * 1) + 1;
 			count = Math.floor(Math.random() * 3) + 1;
-			var tu = new TweenMax.to($(this), time, {top : -200, alpha : 0, rotation:(360*count)});
+			var tu = new TweenMax.to($(this), time, {top : -200, alpha : 0, rotation:(360*count), ease:Linear.easeNone});
 			gearTL.insert(tu, 0);
 		});
 
@@ -175,7 +177,7 @@
 
 			time = Math.floor(Math.random() * 8) + 2;
 			count = Math.floor(Math.random() * 3) + 1;
-			var td = new TweenMax.to($(this), time, {top : setheight * (2), alpha : 0, rotation:(360*count)});
+			var td = new TweenMax.to($(this), time, {top : setheight * (2), alpha : 0, rotation:(360*count), ease:Linear.easeNone});
 			gearTL.insert(td, 0);
 		});
 
