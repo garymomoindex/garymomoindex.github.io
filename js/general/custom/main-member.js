@@ -17,11 +17,9 @@
 
 		if (width != ori_width) {
 			if (width > 767) {
-				$("#yearList").css("display", "none");
 				$(".container-fluid").css("padding-right", "0px");
 				$(".container-fluid").css("padding-left", "0px");
 			} else {
-				$("#yearList").css("display", "");
 				$(".container-fluid").css("padding-right", "15px");
 				$(".container-fluid").css("padding-left", "15px");
 			}
