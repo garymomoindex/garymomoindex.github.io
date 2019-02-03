@@ -113,6 +113,14 @@
 			$("#link-info-title").text("舊3B YouTube頻道");
 			$("#link-info-subtitle").text("");
 			$("#hiddenTarget").attr("href", "https://www.youtube.com/user/3BjuniorOfficial");
+		} else if (target == "link22") {
+			$("#link-info-title").text("官方微博");
+			$("#link-info-subtitle").text("");
+			$("#hiddenTarget").attr("href", "https://weibo.com/u/6981492867");
+		} else if (target == "link23") {
+			$("#link-info-title").text("官方頻道");
+			$("#link-info-subtitle").text("");
+			$("#hiddenTarget").attr("href", "https://space.bilibili.com/399119683/");
 		}
 		$("#hiddenTrigger").trigger("click");
 	});
