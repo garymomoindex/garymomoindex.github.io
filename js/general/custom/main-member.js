@@ -29,7 +29,7 @@
 
 	var today = new Date();
 	var age = today.getFullYear() - parseInt($("#bYear").text());
-	var dMonth = today.getMonth() - parseInt($("#bMonth").text());
+	var dMonth = (today.getMonth() + 1) - parseInt($("#bMonth").text());
 	if (dMonth < 0 || (dMonth === 0 && today.getDate() < parseInt($("#bDate").text()))) {
         age--;
     }
