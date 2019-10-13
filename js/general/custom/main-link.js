@@ -121,6 +121,10 @@
 			$("#link-info-title").text("官方頻道");
 			$("#link-info-subtitle").text("");
 			$("#hiddenTarget").attr("href", "https://space.bilibili.com/399119683/");
+		} else if (target == "link24") {
+			$("#link-info-title").text("舊官方部落格");
+			$("#link-info-subtitle").text("記錄2009年6月2日以前");
+			$("#hiddenTarget").attr("href", "https://ameblo.jp/schoolgirls/theme-10007591088.html");
 		}
 		$("#hiddenTrigger").trigger("click");
 	});
