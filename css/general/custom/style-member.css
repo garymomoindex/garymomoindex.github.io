@@ -61,6 +61,12 @@ body {
 .shadowBox-yellow {
 	box-shadow: 2px 2px 10rem 1rem #ffb11b;
 }
+.shadowBox-green {
+	box-shadow: 2px 2px 10rem 1rem #227d51;
+}
+.shadowBox-blue {
+	box-shadow: 2px 2px 10rem 1rem #2ea9df;
+}
 
 .show-red {
 	color: #e83015;
@@ -85,6 +91,18 @@ body {
 }
 .brand-yellow a, .brand-yellow a:link, .brand-yellow a:visited, .brand-yellow a:hover {
 	color: #ffb11b;
+}
+.show-green {
+	color: #227d51;
+}
+.brand-green a, .brand-green a:link, .brand-green a:visited, .brand-green a:hover {
+	color: #227d51;
+}
+.show-blue {
+	color: #2ea9df;
+}
+.brand-blue a, .brand-blue a:link, .brand-blue a:visited, .brand-blue a:hover {
+	color: #2ea9df;
 }
 
 .showTitle {
