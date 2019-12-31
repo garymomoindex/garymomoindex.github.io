@@ -56,11 +56,9 @@
 	}
 
 	var urlParam = window.location.search.split("visit=")[1] ? window.location.search.split("visit=")[1] : "false";
+	urlParam = "true";
+
 	if (urlParam == "true") {
-		$(".indexOpen1").hide();
-		$(".indexOpen1").css("z-index", "-5");
-		$(".indexOpen2").hide();
-		$(".indexOpen2").css("z-index", "-5");
 		
 		var skipBkYearTL = new TimelineMax({ repeat: -1, yoyo: true });
 		skipBkYearTL.to($("#bkYear"), 1, { scale: 1.2 });
@@ -77,120 +75,6 @@
 		skipTL.insert(sTre, 3);
 
 		skipTL.play();
-	}
-
-	$("#lock1").on("click tap", function() {
-		if (!indexDoorOpen) {
-			indexDoorOpen = true;
-			var doorTL = new TimelineMax();
-
-			doorTL.to($("#lock1"), 0, {
-				alpha : 0
-			})
-			.to($("#lock2"), 0, {
-				alpha : 1
-			})
-			.to($("#lock2"), 0, {
-				alpha : 0
-			}, "+=0.5")
-			.to($("#lock3"), 0, {
-				alpha : 1
-			})
-			.to($("#lock3"), 0, {
-				alpha : 0
-			}, "+=0.5")
-			.to($("#lock4"), 0, {
-				alpha : 1
-			})
-			.to($("#lock4"), 0, {
-				alpha : 0
-			}, "+=0.5")
-			.to($("#lock5"), 0, {
-				alpha : 1
-			})
-			.to($("#lock5"), 0, {
-				alpha : 0
-			}, "+=1")
-			.to($("#lock6"), 0, {
-				alpha : 1
-			})
-			.to($("#smoke"), 0.7, {
-				top : (setheight/3),
-				alpha : 0.8,
-				scale : 1.5,
-				ease:Linear.easeNone
-			})
-			.to($("#smoke"), 0.7, {
-				top : (setheight*2/3),
-				alpha : 0,
-				scale : 2,
-				ease:Power4.easeOut
-			})
-			.to($(".shiftLeft"), 2.5, {
-				left : width * (-200),
-				alpha : 0,
-				ease : Circ.easeIn
-			}, "-=0.7")
-			.to($(".shiftRight"), 2.5, {
-				left : width * (200),
-				alpha : 0,
-				ease : Circ.easeIn
-			}, "-=2.5")
-			.to($(".indexOpen1"), 0, {
-				zIndex : -5
-			}, "-=0.1");
-
-			timerIndex = setTimeout(nextStep, 3300);
-		}
-	});
-
-	function nextStep() {
-		if (timerIndex != null) {
-			clearTimeout(timerIndex);
-			timerIndex = null;
-		}
-		var bkYearTL = new TimelineMax({ repeat: -1, yoyo: true });
-		bkYearTL.to($("#bkYear"), 1, { scale: 1.2 });
-
-		var gearTL = new TimelineMax({paused : true});
-		var t1 = new TweenMax.to($(".shiftGroup1"), 5, {top : -200, alpha : 0, ease:Linear.easeNone});
-		var t2 = new TweenMax.to($(".shiftGroup2"), 5, {top : setheight * (2), alpha : 0, ease:Linear.easeNone});
-
-		gearTL.insert(t1, 0).insert(t2, 0)
-		.to($(".indexOpen2"), 0, {
-			zIndex : -5
-		}, "-=0.1");
-
-		$.each($(".shiftUp"), function(key, value) {
-			var time = 0;
-			var count = 0;
-
-			time = Math.floor(Math.random() * 1) + 1;
-			count = Math.floor(Math.random() * 3) + 1;
-			var tu = new TweenMax.to($(this), time, {top : -200, alpha : 0, rotation:(360*count), ease:Linear.easeNone});
-			gearTL.insert(tu, 0);
-		});
-
-		$.each($(".shiftDown"), function(key, value) {
-			var time = 0;
-			var count = 0;
-
-			time = Math.floor(Math.random() * 8) + 2;
-			count = Math.floor(Math.random() * 3) + 1;
-			var td = new TweenMax.to($(this), time, {top : setheight * (2), alpha : 0, rotation:(360*count), ease:Linear.easeNone});
-			gearTL.insert(td, 0);
-		});
-
-		var tpu = new TweenMax.to($("#myPurple"), 1, {alpha : 1, ease : Circ.easeIn});
-		gearTL.insert(tpu, 4.5);
-		var tpi = new TweenMax.to($("#myPink"), 1, {alpha : 1, ease : Circ.easeIn});
-		gearTL.insert(tpi, 5);
-		var tye = new TweenMax.to($("#myYellow"), 1, {alpha : 1, ease : Circ.easeIn});
-		gearTL.insert(tye, 5.5);
-		var tre = new TweenMax.to($("#myRed"), 1, {alpha : 1, ease : Circ.easeIn});
-		gearTL.insert(tre, 6);
-
-		gearTL.play();
 	}
 
 	$(".left-video figure").on("click tap", function() {
