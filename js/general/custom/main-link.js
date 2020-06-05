@@ -125,6 +125,10 @@
 			$("#link-info-title").text("舊官方部落格");
 			$("#link-info-subtitle").text("記錄2009年6月2日以前");
 			$("#hiddenTarget").attr("href", "https://ameblo.jp/schoolgirls/theme-10007591088.html");
+		} else if (target == "link25") {
+			$("#link-info-title").text("EVILLINE抖音");
+			$("#link-info-subtitle").text("隸屬國王唱片獨立品牌");
+			$("#hiddenTarget").attr("href", "https://www.tiktok.com/@evillinerecords");
 		}
 		$("#hiddenTrigger").trigger("click");
 	});
