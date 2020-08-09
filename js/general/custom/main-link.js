@@ -116,7 +116,7 @@
 		} else if (target == "link22") {
 			$("#link-info-title").text("官方微博");
 			$("#link-info-subtitle").text("");
-			$("#hiddenTarget").attr("href", "https://weibo.com/u/6981492867");
+			$("#hiddenTarget").attr("href", "https://www.weibo.com/u/6981492867?refer_flag=1005050010_&is_hot=1");
 		} else if (target == "link23") {
 			$("#link-info-title").text("官方頻道");
 			$("#link-info-subtitle").text("");
@@ -126,9 +126,17 @@
 			$("#link-info-subtitle").text("記錄2009年6月2日以前");
 			$("#hiddenTarget").attr("href", "https://ameblo.jp/schoolgirls/theme-10007591088.html");
 		} else if (target == "link25") {
-			$("#link-info-title").text("EVILLINE抖音");
+			$("#link-info-title").text("EVILLINE TikTok");
 			$("#link-info-subtitle").text("隸屬國王唱片獨立品牌");
 			$("#hiddenTarget").attr("href", "https://www.tiktok.com/@evillinerecords");
+		} else if (target == "link26") {
+			$("#link-info-title").text("官方頻道");
+			$("#link-info-subtitle").text("");
+			$("#hiddenTarget").attr("href", "https://open.spotify.com/artist/3Zl0EsuYV23OgNw6WqGelN");
+		} else if (target == "link27") {
+			$("#link-info-title").text("官方播放清單頻道");
+			$("#link-info-subtitle").text("含部分LIVE歌單");
+			$("#hiddenTarget").attr("href", "https://open.spotify.com/user/zdg49jhwhx12shak0zboev3zq");
 		}
 		$("#hiddenTrigger").trigger("click");
 	});
