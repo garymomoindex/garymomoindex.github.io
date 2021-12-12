@@ -137,6 +137,10 @@
 			$("#link-info-title").text("官方播放清單頻道");
 			$("#link-info-subtitle").text("含部分LIVE歌單");
 			$("#hiddenTarget").attr("href", "https://open.spotify.com/user/zdg49jhwhx12shak0zboev3zq");
+		} else if (target == "link28") {
+			$("#link-info-title").text("星塵StaCommu");
+			$("#link-info-subtitle").text("隸屬星塵事務所");
+			$("#hiddenTarget").attr("href", "https://www.stacommu.jp/");
 		}
 		$("#hiddenTrigger").trigger("click");
 	});
