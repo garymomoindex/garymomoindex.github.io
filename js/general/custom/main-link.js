@@ -42,7 +42,7 @@
 			$("#link-info-subtitle").text("（海外-英語）");
 			$("#hiddenTarget").attr("href", "http://fc.momoclo.net/pc/demo/");
 		} else if (target == "link4") {
-			$("#link-info-title").text("官方週邊商店");
+			$("#link-info-title").text("官方周邊商店");
 			$("#link-info-subtitle").text("");
 			$("#hiddenTarget").attr("href", "http://harue-shouten.jp/");
 		} else if (target == "link5") {
