@@ -12,19 +12,19 @@
 	top: 24%;
 	width: 15%;
 	font-size: 3rem;
-	font-family: "Wendy One", cursive;
+	font-family: "Wendy One", "Reggae One", cursive, "Noto Sans TC", sans-serif;
 }
 #activeYear {
 	left: -16%;
 	top: 38%;
 	width: 15%;
 	font-size: 6rem;
-	font-family: "Wendy One", cursive;
+	font-family: "Wendy One", "Reggae One", cursive, "Noto Sans TC", sans-serif;
 }
 #pastYear {
 	width: 15%;
 	font-size: 3rem;
-	font-family: "Wendy One", cursive;
+	font-family: "Wendy One", "Reggae One", cursive, "Noto Sans TC", sans-serif;
 }
 .showYear a {
 	color: white;
