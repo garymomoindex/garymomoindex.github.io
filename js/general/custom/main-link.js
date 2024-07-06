@@ -60,27 +60,27 @@
 		} else if (target == "link8") {
 			$("#link-info-title").text("官方推特");
 			$("#link-info-subtitle").text("");
-			$("#hiddenTarget").attr("href", "https://twitter.com/momorikobuta517");
+			$("#hiddenTarget").attr("href", "https://x.com/momorikobuta517");
 		} else if (target == "link9") {
 			$("#link-info-title").text("官方推特");
 			$("#link-info-subtitle").text("Live專用");
-			$("#hiddenTarget").attr("href", "https://twitter.com/information_mcz");
+			$("#hiddenTarget").attr("href", "https://x.com/information_mcz");
 		} else if (target == "link10") {
 			$("#link-info-title").text("官方推特");
 			$("#link-info-subtitle").text("經紀人kwkm自肥");
-			$("#hiddenTarget").attr("href", "https://twitter.com/momowgp");
+			$("#hiddenTarget").attr("href", "https://x.com/momowgp");
 		} else if (target == "link11") {
 			$("#link-info-title").text("EVILLINE推特");
 			$("#link-info-subtitle").text("隸屬國王唱片獨立品牌");
-			$("#hiddenTarget").attr("href", "https://twitter.com/evillinerecords");
+			$("#hiddenTarget").attr("href", "https://x.com/evillinerecords");
 		} else if (target == "link12") {
 			$("#link-info-title").text("國王唱片專區推特");
 			$("#link-info-subtitle").text("");
-			$("#hiddenTarget").attr("href", "https://twitter.com/momoclo_king_pr");
+			$("#hiddenTarget").attr("href", "https://x.com/momoclo_king_pr");
 		} else if (target == "link13") {
 			$("#link-info-title").text("星塵的偶像行星推特");
 			$("#link-info-subtitle").text("隸屬星塵事務所");
-			$("#hiddenTarget").attr("href", "https://twitter.com/stapla_official");
+			$("#hiddenTarget").attr("href", "https://x.com/stapla_official");
 		} else if (target == "link14") {
 			$("#link-info-title").text("官方專頁");
 			$("#link-info-subtitle").text("");
