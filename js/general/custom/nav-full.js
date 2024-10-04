@@ -97,7 +97,7 @@ document.writeln("				</li>");
 document.writeln("				<li class='dropdown'>");
 document.writeln("					<a class='dropdown-toggle' data-toggle='dropdown'>台灣 -愛-<span class='caret'></span></a>");
 document.writeln("					<ul class='dropdown-menu' id='momoNavMember'>");
-document.writeln("						<li><a href='https://garymomo2019.github.io/liveTaipei'>2019年 -台北 Legacy-</a></li>");
+document.writeln("						<li><a href='https://garymomo2019.github.io/live-taipei'>2019年 台北 -永豐 Legacy Taipei-</a></li>");
 document.writeln("					</ul>");
 document.writeln("				</li>");
 
